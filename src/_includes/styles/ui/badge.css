@@ -1,0 +1,13 @@
+.badge {
+  --bg: var(--color-primary);
+  --color: white;
+
+  display: inline-block;
+  background: var(--bg);
+  font-size: var(--font-0-size);
+  letter-spacing: var(--font-0-spacing);
+  padding: 0.1em 0.5em;
+  color: var(--color);
+  border-radius: .3em;
+  font-weight: bold;
+}

@@ -1,0 +1,5 @@
+<div class="ly-blocks">
+  {{ for block of blocks }}
+    {{ include `./blocks/${block.type}/${block.type}.vto` { block, blocks } }}
+  {{ /for }}
+</div>

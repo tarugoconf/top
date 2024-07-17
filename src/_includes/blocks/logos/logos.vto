@@ -1,0 +1,23 @@
+<section id="{{ block.id }}" class="block-logos theme is-light width-box fox-fill">
+  {{ if block.title || block.description }}
+  <header class="block-logos-header">
+    <h2 class="type-title">{{ block.title }}</h2>
+
+    <div class="block-logos-description type-txt">
+      {{ block.description |> md }}
+    </div>
+  </header>
+  {{ /if }}
+
+  <ul class="block-logos-list is-{{ block.size }}">
+    {{ for item of block.items }}
+    <li>
+        <a href="{{ item.url }}" target="_blank">
+            <img src="{{ item.img }}" alt="{{ item.alt }}">
+
+            {{ item.description |> md }}
+        </a>
+    </li>
+    {{ /for }}
+  </ul>
+</section>

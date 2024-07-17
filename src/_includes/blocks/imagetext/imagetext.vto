@@ -1,0 +1,13 @@
+<section id="{{ block.id }}" class="block-imagetext theme {{ block.theme }}">
+  <figure>
+    <img src="{{ block.src }}">
+  </figure>
+
+  <div class="type-txt">
+    {{ if block.title }}
+      <h2 class="type-title">{{ block.title }}</h2>
+    {{ /if }}
+
+    {{ block.text |> md }}
+  </div>
+</section>

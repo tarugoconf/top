@@ -1,0 +1,19 @@
+<footer class="footer theme is-primary">
+  <div class="footer-content">
+    <div>
+      {{ footer.copyright |> md }}
+    </div>
+
+    <ul>
+      {{ for item of footer.menu }}
+      <li{{ item.separator ? ' class="is-separated"' : "" }}>
+          <a href="{{ item.href }}">
+              {{ item.text }}
+          </a>
+      </li>
+      {{ /for }}
+    </ul>
+  </div>
+
+  <img class="footer-logo" src="{{ footer.logo }}" width="40" height="40">
+</footer>

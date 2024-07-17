@@ -1,0 +1,13 @@
+:root {
+  /* Colors */
+  --color-primary: CornflowerBlue;
+  --color-secondary: DarkSalmon;
+  --color-dark: black;
+  --color-light: Linen;
+
+  /* Fonts */
+  --font-family-display: system-ui, sans-serif;
+  --font-family-ui: system-ui, sans-serif;
+  --font-weight-bold: 600;
+  --font-weight-bolder: 700;
+}

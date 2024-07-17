@@ -1,0 +1,60 @@
+.block-people {
+  display: grid;
+  grid-column: start / end;
+  row-gap: 2rem;
+  column-gap: 4rem;
+  align-items: start;
+  
+  @media (width > 1050px) {
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  }
+}
+
+@media (width > 1050px) {
+  .block-people-header {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+.block-people-list {
+  --width: 130px;
+  --img-size: 120px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--width));
+  grid-column-gap: 2em;
+  grid-row-gap: 4em;
+  justify-content: space-around;
+  text-align: center;
+
+  &.is-center {
+    grid-template-columns: repeat(auto-fit, var(--width));
+    justify-content: center;
+  }
+
+  > li > a {
+    display: block;
+    text-decoration: none;
+  }
+
+  & h3 {
+    margin: 1em 0 .3em;
+  }
+
+  & p {
+    font-size: var(--font-0-size);
+    margin: 0;
+  }
+
+  & img {
+    width: var(--img-size);
+    height: var(--img-size);
+    object-fit: cover;
+    filter: saturate(0);
+    border-radius: .5rem;
+  }
+}

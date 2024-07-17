@@ -1,0 +1,19 @@
+<figure id="{{ block.id }}" class="block-video theme is-light box-fill no-padding width-full">
+  <video src="{{ block.src }}"
+  {{
+    block.mode === 'background'
+      ? 'autoplay muted playsinline loop'
+      : block.mode === 'video'
+      ? 'controls'
+      : ''
+  }}
+  ></video>
+
+  <div class="block-video-over">{{ block.text_over }}</div>
+
+  {{ if block.caption }}
+    <figcaption>
+    {{ block.caption |> md }}
+    </figcaption>
+  {{ /if }}
+</figure>

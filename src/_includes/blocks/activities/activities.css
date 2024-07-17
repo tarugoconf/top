@@ -1,0 +1,53 @@
+.block-activities-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2em;
+
+  @media (min-width: 500px) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  > li {
+    background: white;
+    border-radius: .5rem;
+    overflow: hidden;
+    container-type: inline-size;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      @container (min-width: 450px) {
+        flex-direction: row;
+      }
+    }
+  }
+  .activity-content {
+    padding: 1rem;
+  }
+
+  .activity-tags {
+    margin: 0 0 .5em 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3em;
+  }
+
+  .activity-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+
+    @container (min-width: 450px) {
+      height: 100%;
+      width: 200px;
+    }
+  }
+
+  .activity-title {
+    margin: 0;
+  }
+}

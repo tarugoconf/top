@@ -1,0 +1,23 @@
+.block-hero {
+  min-height: 70vh;
+  align-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.block-hero-header {
+  font-size: var(--font-5-size);
+  letter-spacing: var(--font-5-spacing);
+
+  h1 {
+    font-size: var(--font-7-size);
+    letter-spacing: var(--font-7-spacing);
+    margin: 0;
+  }
+}
+.block-hero-text {
+  max-width: 45em;
+  margin: auto;
+  font-size: var(--font-2-size);
+  letter-spacing: var(--font-2-spacing);
+}

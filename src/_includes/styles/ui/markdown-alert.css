@@ -1,0 +1,25 @@
+.markdown-alert {
+  --color: currentColor;
+  padding: 1rem;
+  background-color: white;
+  text-align: left;
+  border-radius: 1rem;
+  font-size: var(--font-1-size);
+  line-height: var(--line-height-text);
+
+  p {
+    margin: 0;
+  }
+  
+  .markdown-alert-title {
+    display: none;
+  }
+}
+.markdown-alert-title {
+  font-weight: bold;
+  color: var(--color);
+  text-transform: uppercase;
+}
+.markdown-alert-note {
+  --color: var(--color-primary);
+}

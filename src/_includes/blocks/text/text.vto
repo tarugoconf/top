@@ -1,0 +1,9 @@
+<div id="{{ block.id }}" class="block-text theme {{ block.theme }}">
+  {{ if block.title }}
+    <h2 class="type-title">{{ block.title }}</h2>
+  {{ /if }}
+
+  <div class="type-txt">
+    {{ block.text |> md }}
+  </div>
+</div>

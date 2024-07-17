@@ -1,0 +1,38 @@
+@layer reset, ui, theme;
+
+@import "styles/reset.css" layer(reset);
+@import "styles/base.css" layer(reset);
+
+/* Generic UI components */
+@import "styles/ui/accordion.css" layer(ui);
+@import "styles/ui/button.css" layer(ui);
+@import "styles/ui/badge.css" layer(ui);
+@import "styles/ui/navbar.css" layer(ui);
+@import "styles/ui/footer.css" layer(ui);
+@import "styles/ui/text.css" layer(ui);
+@import "styles/ui/markdown-alert.css" layer(ui);
+
+/* Blocks */
+@import "blocks/calendar/calendar.css" layer(ui);
+@import "blocks/activities/activities.css" layer(ui);
+@import "blocks/contact/contact.css" layer(ui);
+@import "blocks/faq/faq.css" layer(ui);
+@import "blocks/header/header.css" layer(ui);
+@import "blocks/hero/hero.css" layer(ui);
+@import "blocks/imagetext/imagetext.css" layer(ui);
+@import "blocks/location/location.css" layer(ui);
+@import "blocks/logos/logos.css" layer(ui);
+@import "blocks/separator/separator.css" layer(ui);
+@import "blocks/pdf/pdf.css" layer(ui);
+@import "blocks/people/people.css" layer(ui);
+@import "blocks/text/text.css" layer(ui);
+@import "blocks/video/video.css" layer(ui);
+@import "blocks/speakers/speakers.css" layer(ui);
+@import "blocks/tickets/tickets.css" layer(ui);
+
+/* Theme */
+@import "styles/theme/main.css" layer(theme);
+@import "styles/theme/variables.css" layer(theme);
+@import "styles/theme/typography.css" layer(theme);
+@import "styles/theme/variants.css" layer(theme);
+@import "./theme.css" layer(theme);

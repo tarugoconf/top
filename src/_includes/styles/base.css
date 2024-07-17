@@ -1,0 +1,48 @@
+html {
+  scroll-behavior: smooth;
+  text-rendering: auto;
+  overflow-wrap: break-word;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+body {
+  --row-gap: 4rem;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  grid-template-columns: minmax(2rem, 1fr) [start] minmax(0, 617px) [center] minmax(0, 617px) [end] minmax(2rem, 1fr);
+
+  > * {
+    grid-column: 1 / -1;
+  }
+}
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+:focus {
+  z-index: 1;
+}
+
+:focus-visible {
+  outline-width: 1px;
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-color: currentColor;
+}
+
+.ly-blocks {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  row-gap: var(--row-gap);
+  margin-top: calc(150px + 5vh);
+
+  &:has(> .block-hero:first-child) {
+    margin-top: 0;
+  }
+}

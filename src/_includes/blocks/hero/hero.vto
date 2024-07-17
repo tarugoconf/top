@@ -1,0 +1,9 @@
+<div class="block-hero theme is-primary box-fill width-full">
+  <header class="block-hero-header">
+    <h1>{{ block.title |> md(true) }}</h1>
+    {{ block.intro |> md }}
+  </header>
+  <div class="block-hero-text" data-open>
+    {{ block.text |> md }}
+  </div>
+</div>

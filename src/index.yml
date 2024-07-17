@@ -1,0 +1,174 @@
+layout: layouts/home.vto
+menu:
+  - text: Location
+    url: '#location'
+    highlight: false
+  - text: Calendar
+    url: '#calendar'
+    highlight: false
+  - text: Partners
+    url: '#partners'
+    highlight: true
+  - text: Contact
+    url: '#contact'
+    highlight: false
+blocks:
+  - type: hero
+    title: Your TOP event
+    intro: This is an intro
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin elementum maximus. Morbi venenatis eros sit amet ultrices venenatis. Etiam id lectus lorem. Nulla porta, purus eget molestie pulvinar, nulla purus vehicula sem, eget ultrices arcu felis sit amet lacus. Duis posuere tincidunt bibendum. Praesent sed tortor a lectus efficitur fermentum. Morbi venenatis ex in arcu pretium, vitae molestie arcu hendrerit.
+  - type: text
+    title: Awesome TOP event
+    theme: is-light width-box box-border
+    text: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin elementum maximus. Morbi venenatis eros sit amet ultrices venenatis. Etiam id lectus lorem. Nulla porta, purus eget molestie pulvinar, nulla purus vehicula sem, eget ultrices arcu felis sit amet lacus. Duis posuere tincidunt bibendum. Praesent sed tortor a lectus efficitur fermentum. Morbi venenatis ex in arcu pretium, vitae molestie arcu hendrerit. 
+  - type: location
+    title: Location
+    id: location
+    theme: is-light width-box box-fill
+    embed: |
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23302.586624003117!2d-8.5916528831209!3d43.108227602508535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2ef47594794cff%3A0x7f2a4a9168ec7483!2sTordoia%2C%2015683%20Tordoia%2C%20A%20Coru%C3%B1a!5e0!3m2!1sgl!2ses!4v1721243828320!5m2!1sgl!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    caption: 
+    directions:
+      - title: Tordoia
+        description: 15683 Tordoia, A Coruña
+        icon: map-pin
+      - title: Metro
+        description: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        icon: train-simple
+      - title: Train
+        description: >-
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <span class="badge"
+          style="--bg:var(--color-secondary);--color:black">Line 1</span>
+        icon: train
+      - title: Taxi
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        icon: taxi
+      - title: Car
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        icon: car
+  - type: calendar
+    title: Calendar
+    id: calendar
+    days:
+      - title: 'Day 1'
+        events:
+          - time: '15:00h'
+            title: First event
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+            speakers: []
+          - time: '16:00h'
+            title: Second event
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+            speakers: []
+      - title: 'Day 2'
+        events:
+          - time: '15:00h'
+            title: First event
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+            speakers: []
+          - time: '16:00h'
+            title: Second event
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+            speakers: []
+  - type: separator
+    width: is-default
+  - type: speakers
+    title: Speakers
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+    speakers:
+      - name: Person 1
+        id: name-1
+        company: Company name
+        role: Role
+        bio: |
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum. Nullam varius turpis vel felis laoreet, ut ornare nisi placerat. Suspendisse volutpat suscipit lorem vitae fermentum.
+        image: /files/people/avatar.webp
+      - name: Person 2
+        id: name-2
+        company: Company name
+        role: Role
+        bio: |
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum. Nullam varius turpis vel felis laoreet, ut ornare nisi placerat. Suspendisse volutpat suscipit lorem vitae fermentum.
+        image: /files/people/avatar.webp
+  - type: logos
+    title: Partners
+    id: partners
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+    size: medium
+    items:
+      - alt: Logo
+        img: /files/logos/logo.png
+        url: 'https://github.com/tarugoconf/TOP'
+        description: 
+      - alt: Logo
+        img: /files/logos/logo.png
+        url: 'https://github.com/tarugoconf/TOP'
+        description: 
+      - alt: Logo
+        img: /files/logos/logo.png
+        url: 'https://github.com/tarugoconf/TOP'
+        description: 
+  - type: separator
+    width: is-default
+  - type: logos
+    size: small
+    items:
+      - alt: Logo
+        img: /files/logos/logo.png
+        url: 'https://github.com/tarugoconf/TOP'
+        description: 
+      - alt: Logo
+        img: /files/logos/logo.png
+        url: 'https://github.com/tarugoconf/TOP'
+        description: 
+      - alt: Logo
+        img: /files/logos/logo.png
+        url: 'https://github.com/tarugoconf/TOP'
+        description: 
+  - type: separator
+    width: is-default
+  - type: people
+    title: Patreons
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+    items:
+      - name: Person
+        img: /files/people/avatar.webp
+      - name: Person
+        img: /files/people/avatar.webp
+      - name: Person
+        img: /files/people/avatar.webp
+      - name: Person
+        img: /files/people/avatar.webp
+      - name: Person
+        img: /files/people/avatar.webp
+      - name: Person
+        img: /files/people/avatar.webp
+
+  - type: separator
+    width: is-full
+  - type: faq
+    title: FAQ
+    theme: is-light width-box box-fill
+    questions:
+      - question: Question 1
+        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+      - question: Question 2
+        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+      - question: Question 3
+        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet libero ut, lobortis ipsum."
+  - type: contact
+    title: Contact
+    id: contact
+    theme: is-light width-box box-fill
+    items:
+      - title: Name
+        info: Event manager
+        links:
+          - url: 'mailto:email@example.com'
+            icon: envelope
+            text: email@example.com
+metas:
+  image: ''

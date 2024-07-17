@@ -1,0 +1,36 @@
+<section id="{{ block.id }}" class="block-activities theme is-light width-box fox-fill">
+  {{ if block.title || block.description }}
+  <header class="block-activities-header">
+    <h2 class="type-title">{{ block.title }}</h2>
+
+    <div class="block-activities-description type-txt">
+      {{ block.description |> md }}
+    </div>
+  </header>
+  {{ /if }}
+
+  <ul class="block-activities-list is-{{ block.size }}">
+    {{ for activity of block.items }}
+    <li>
+      <div>
+        <img src="{{ activity.img }}" alt="" class="activity-image">
+
+        <div class="activity-content">
+          <header>
+            <p class="activity-tags">
+            {{ for tag of activity.tags }}
+              <span class="badge">{{ tag }}</span>
+            {{ /for }}
+            </p>
+            <h2 class="activity-title type-short-m-bold">{{ activity.title }}</h2>
+          </header>
+
+          <div class="type-short">
+            {{ activity.description |> md }}
+          </div>
+        </div>
+      </div>
+    </li>
+    {{ /for }}
+  </ul>
+</section>

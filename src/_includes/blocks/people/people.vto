@@ -1,0 +1,25 @@
+<section id="{{ block.id }}" class="block-people theme is-light width-box fox-fill">
+  {{ if block.title || block.description }}
+  <header class="block-people-header">
+    <h2 class="type-title">{{ block.title }}</h2>
+
+    <div class="block-people-description type-txt">
+      {{ block.description |> md }}
+    </div>
+  </header>
+  {{ /if }}
+
+  <ul class="block-people-list is-{{ block.size }}">
+    {{ for item of block.items }}
+    <li>
+      {{ if item.url }}<a href="{{ item.url }}">{{ /if }}
+      <img src="{{ item.img }}" alt="{{ item.name }}">
+
+      <h3 class="type-short-bold">{{ item.name }}</h3>
+      {{ if item.url }}</a>{{ /if }}
+
+      {{ item.description |> md }}
+    </li>
+    {{ /for }}
+  </ul>
+</section>

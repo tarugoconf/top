@@ -1,0 +1,101 @@
+/** Color themes */
+.theme {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  a {
+    color: var(--color-links, currentColor);
+  }
+  h1, h2 {
+    color: var(--color-titles);
+  }
+  svg {
+    fill: var(--color-icons, currentColor);
+  }
+  .button {
+    color: var(--color-button-text);
+    background: var(--color-button-bg);
+    border-radius: var(--border-radius-button);
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--color-button-bg), var(--color-button-text) 20%);
+    }
+  }
+
+  &.is-light {
+    --color-bg: var(--color-light);
+    --color-bg-hover: color-mix(in srgb, var(--color-primary), var(--color-bg) 80%);
+    
+    --color-icons: var(--color-primary);
+    --color-titles: var(--color-primary);
+    --color-lines: var(--color-primary);
+    --color-text: var(--color-dark);
+    --color-links: var(--color-dark);
+    --color-button-bg: var(--color-secondary);
+    --color-button-text: var(--color-dark);
+  }
+  
+  &.is-primary {
+    --color-bg: var(--color-primary);
+    --color-titles: var(--color-dark);
+    --color-lines: var(--color-light);
+    --color-text: white;
+    --color-links: var(--color-light);
+  }
+  
+  &.is-dark {
+    --color-bg: var(--color-dark);
+    --color-titles: var(--color-primary);
+    --color-lines: var(--color-primary);
+    --color-text: var(--color-light);
+    --color-links: var(--color-primary);
+  }
+}
+
+/* Width variants */
+.width-box {
+  grid-column: start / end;
+}
+
+.width-full {
+  grid-column: 1 / -1;
+}
+
+/* Box variants */
+.box-border {
+  border: solid 2px var(--color-lines);
+  padding: 2.5rem;
+}
+.box-fill {
+  --row-padding: 2.5rem;
+  padding: var(--row-padding);
+
+  &.no-padding {
+    padding: 0;
+  }
+}
+
+/* Combinations */
+.width-full.box-fill + .width-full.box-fill {
+  margin-top: calc(var(--row-gap) * -1);
+}
+
+.box-fill.is-light {
+  padding-left: 0;
+  padding-right: 0;
+}
+.block-separator + .box-fill.is-light {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.box-fill.is-light + .block-separator {
+  margin-top: 0;
+}
+
+.block-imagetext.box-fill {
+  padding: 0;
+}
+.theme.is-light:last-child {
+  margin-bottom: var(--row-gap);
+}

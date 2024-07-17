@@ -1,0 +1,43 @@
+.block-contact {
+  display: grid;
+  grid-template-columns: subgrid;
+  
+  > div {
+    display: grid;
+    grid-column: start / end;
+    row-gap: 2rem;
+    column-gap: 4rem;
+  
+    @media (650px < width < 1050px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  
+      & header {
+        grid-column: 1 / -1;
+      }
+    }
+  
+    @media (width >= 1050px) {
+      grid-template-columns: minmax(0, 350px) repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+.block-contact-links {
+  list-style: none;
+  margin: 1em 0 0;
+  padding: 0;
+
+  svg {
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+  }
+}
+
+address {
+  font-style: normal;
+
+  h3, p {
+    margin: 0;
+  }
+}

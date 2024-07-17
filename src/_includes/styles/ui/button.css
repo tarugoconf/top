@@ -1,0 +1,32 @@
+.button {
+  display: inline-flex;
+  column-gap: .5em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: solid 1px transparent;
+  padding: 1em 1.5em;
+  min-height: 2.5em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 100ms;
+  font-family: var(--font-family-ui);
+  font-size: var(--font-1-size);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--font-1-spacing);
+  line-height: 1;
+  text-transform: uppercase;
+
+  &.is-disabled,
+  &:disabled,
+  &[aria-disabled="true"] {
+    cursor: default;
+    opacity: .33;
+    pointer-events: none;
+  }
+
+  &.is-small {
+    font-size: var(--font-0-size);
+    padding: 1em;
+  }
+}

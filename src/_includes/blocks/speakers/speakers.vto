@@ -1,0 +1,66 @@
+<section id="{{ block.id }}" class="block-speakers theme is-light width-box fox-fill">
+  <header class="block-speakers-header">
+    <h2 class="type-title">{{ block.title }}</h2>
+
+    <div class="type-txt">
+      {{ block.description |> md }}
+    </div>
+  </header>
+
+  <ul class="block-speakers-list">
+  {{ for speaker of block.speakers }}
+  <li>
+    <button class="speaker" data-open="dialog-{{ speaker.id }}">
+      <img class="speaker-image" src="{{ speaker.image }}">
+      <h4 class="type-short-bold">{{ speaker.name }}</h4>
+
+      <p class="type-short">
+        {{ if speaker.company }}
+          {{ speaker.company }}<br>
+        {{ /if }}
+        <em class="speaker-position">{{ speaker.role }}</em>
+      </p>
+    </button>
+  </li>
+  {{ /for }}
+  </ul>
+</section>
+
+{{ for speaker of block.speakers }}
+  <dialog class="speaker-modal theme is-light" id="dialog-{{ speaker.id }}">
+    <button data-close class="speaker-modal-close" aria-label="Cerrar">
+      {{ "x" |> icon("regular") }}
+    </button>
+    
+    <div class="speaker-modal-content">
+      <header class="speaker-modal-header">
+        <div class="speaker-modal-photo">
+          <img src="{{ speaker.image }}">
+        </div>
+
+        <div class="speaker-modal-title">
+            <h4 class="type-subtitle">{{ speaker.name }}</h4>
+
+            <p class="type-short">
+              {{ if speaker.company }}
+              <strong class="type-txt-bold">{{ speaker.company }}</strong><br>
+              {{ /if }}
+              {{ speaker.role }}
+            </p>
+        </div>
+
+        <address class="speaker-modal-links">
+          {{ for link of speaker.links }}
+            <a href="{{ link.url }}" target="_blank">
+              {{ link.icon |> icon }}
+            </a>
+            {{ /for }}
+        </address>
+      </header>
+
+      <div class="speaker-modal-bio type-txt">
+          {{ speaker.bio |> md }}
+      </div>
+    </div>
+  </dialog>
+{{ /for }}

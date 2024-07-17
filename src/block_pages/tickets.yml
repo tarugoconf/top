@@ -1,0 +1,52 @@
+url: /tickets/
+menu:
+  - text: Home
+    url: /
+    highlight: true
+blocks:
+  - type: header
+    title: Get your tickets
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin elementum maximus. Morbi venenatis eros sit amet ultrices venenatis. Etiam id lectus lorem. Nulla porta, purus eget molestie pulvinar, nulla purus vehicula sem, eget ultrices arcu felis sit amet lacus. 
+  - type: tickets
+    id: tickets
+    features:
+      - id: welcome_pack
+        text: Welcome Pack
+      - id: streaming
+        text: Streaming access
+      - id: tshirt
+        text: Tshirt
+
+    tickets:
+      - name: Type 1
+        pricing: 20€ + IVA
+        img: /files/tickets/ticket.png
+        buy:
+          text: Buy now
+          url: '#'
+          disabled: false
+        features:
+          - welcome_pack
+      - name: Type 2
+        pricing: 30€ + IVA
+        img: /files/tickets/ticket.png
+        buy:
+          text: Buy now
+          url: '#'
+          disabled: false
+        features:
+          - welcome_pack
+          - streaming
+      - name: Type 3
+        pricing: 40€ + IVA
+        img: /files/tickets/ticket.png
+        buy:
+          text: Coming soon
+          url: '#'
+          disabled: true
+        features:
+          - welcome_pack
+          - streaming
+          - tshirt
+title: Tickets

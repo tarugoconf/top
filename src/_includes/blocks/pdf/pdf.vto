@@ -1,0 +1,22 @@
+<section id="{{ block.id }}" class="block-pdf theme {{ block.theme }}">
+  <div class="type-txt">
+    {{ if block.title }}
+      <h2 class="type-title">{{ block.title }}</h2>
+    {{ /if }}
+    
+
+    <div>
+      {{ block.text |> md }}
+    </div>
+  </div>
+
+  <figure>
+    <iframe src="{{ block.src }}"></iframe>
+
+    {{ if block.caption }}
+    <figcaption class="type-caption">
+      {{ block.caption |> md }}
+    </figcaption>
+    {{ /if }}
+  </figure>
+</section>

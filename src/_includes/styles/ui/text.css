@@ -1,0 +1,41 @@
+.text {
+  max-width: 45em;
+  margin: auto;
+  padding: 150px 2rem 4rem;
+}
+
+.text-header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: solid 2px var(--color-primary);
+}
+.text-body {
+  & h2 {
+    font-size: var(--font-5-size);
+    letter-spacing: var(--font-4-spacing);
+    line-height: var(--line-height-medium);
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
+  & h3 {
+    font-size: var(--font-3-size);
+    letter-spacing: var(--font-3-spacing);
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
+  & h4 {
+    font-size: var(--font-2-size);
+    letter-spacing: var(--font-2-spacing);
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
+
+  & p {
+    margin: .5em 0;
+  }
+
+  & > :first-child,
+  & h2 + h3 {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.block-pdf {
+  display: grid;
+  grid-template-columns: subgrid;
+  row-gap: 2rem;
+  column-gap: 2rem;
+
+  > * {
+    grid-column: start / end;
+  }
+
+  > div > div {
+    column-width: 20em;
+    column-gap: 2rem;
+  }
+  
+  @media (width > 1050px) {
+    > div {
+      grid-column: start / center;
+    }
+    figure {
+      grid-column: center / end;
+    }
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 3 / 2;
+    border: solid 1px var(--color-secondary);
+    border-radius: .5rem;
+    outline: 0;
+    box-shadow: 0 4px 8px -2px #0003;
+    margin: auto;
+    display: block;
+  }
+  figcaption {
+    text-align: center;
+  }
+}

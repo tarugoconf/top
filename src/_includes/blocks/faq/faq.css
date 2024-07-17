@@ -1,0 +1,23 @@
+.block-faq {
+  display: grid;
+  grid-template-columns: subgrid;
+  
+  > div {
+    grid-column: start / end;
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 4rem;
+    align-items: start;
+  
+    @media (width > 1050px) {
+      grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    }
+  }
+}
+
+@media (width > 1050px) {
+  .block-faq-header {
+    position: sticky;
+    top: 120px;
+  }
+}

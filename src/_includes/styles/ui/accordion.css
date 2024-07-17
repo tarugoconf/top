@@ -1,0 +1,45 @@
+.accordion {
+  &[open] > summary::before {
+    transform: rotate(0deg);
+  }
+
+  summary {
+    --marker-image: url('data:image/svg+xml;charset=UTF-8,<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m8 9.586 5.293-5.293a1 1 0 1 1 1.414 1.414l-6 6a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 1.414-1.414L8 9.586Z" /></svg>');
+
+    display: flex;
+    column-gap: .5em;
+    align-items: center;
+    padding: .6em;
+    min-height: 2.5em;
+    text-decoration: none;
+    color: inherit;
+    background: inherit;
+    cursor: pointer;
+    list-style: none;
+    border-radius: .5rem;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      mask: var(--marker-image) center center / 100% 100% no-repeat;
+      -webkit-mask: var(--marker-image) center center / 100% 100% no-repeat;
+      width: 1em;
+      height: 1em;
+      background: currentColor;
+      transform: rotate(-90deg);
+      flex: 0 0 auto;
+    }
+
+    &:hover {
+      background-color: var(--color-bg-hover);
+    }
+  }
+
+  > div {
+    margin-left: 2em;
+  }
+}

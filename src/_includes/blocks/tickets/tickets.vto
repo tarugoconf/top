@@ -1,0 +1,94 @@
+<section id="{{ block.id }}" class="block-tickets theme is-light width-box fox-fill">
+  <header class="block-tickets-header">
+    <h2 class="type-title">{{ block.title }}</h2>
+
+    <div class="type-txt">
+      {{ block.description |> md }}
+    </div>
+  </header>
+
+  <table class="tickets-table">
+    <thead>
+      <tr>
+        <th></th>
+        {{ for ticket of block.tickets }}
+        <th class="ticket-header">
+          <img class="ticket-img" src="{{ ticket.img }}" alt="{{ ticket.name }}">
+
+          <p>
+            <strong class="ticket-name">{{ ticket.name }}</strong>
+            <em class="ticket-pricing">{{ ticket.pricing }}</em>
+          </p>
+
+          {{ if ticket.buy.disabled }}
+          <strong class="button is-small is-disabled">{{ ticket.buy.text }}</strong>
+          {{ else }}
+          <a class="button is-small" href="{{ ticket.buy.url }}">{{ ticket.buy.text }}</a>
+          {{ /if }}
+        </th>
+        {{ /for }}
+      </tr>
+    </thead>
+
+    <tbody>
+      {{ for feature of block.features }}
+      <tr class="ticket-feature">
+        <th class="ticket-feature-title">
+          {{ feature.text }}
+        </th>
+
+        {{ for ticket of block.tickets }}
+        {{ set ok = ticket.features.includes(feature.id) }}
+        <td class="ticket-feature-value is-{{ ok ? 'included' : 'missing' }}">
+          {{ if ok }}
+            {{ "check-circle" |> icon }}
+          {{ else }}
+            {{ "x" |> icon("regular") }}
+          {{ /if }}
+        </td>
+        {{ /for }}
+      </tr>
+      {{ /for }}
+    </tbody>
+  </table>
+
+  <ul class="tickets-list">
+    {{ for ticket of block.tickets }}
+    <li>
+      <div class="ticket-header">
+        <img class="ticket-img" src="{{ ticket.img }}" alt="{{ ticket.name }}">
+        <p>
+          <strong class="ticket-name">{{ ticket.name }}</strong>
+          <em class="ticket-pricing">{{ ticket.pricing }}</em>
+        </p>
+
+        {{ if ticket.buy.disabled }}
+          <strong class="button is-small is-disabled">{{ ticket.buy.text }}</strong>
+        {{ else }}
+          <a class="button is-small" href="{{ ticket.buy.url }}">{{ ticket.buy.text }}</a>
+        {{ /if }}
+      </div>
+
+      <ul class="tickets-features">
+        {{ for feature of block.features }}
+        {{ set ok = ticket.features.includes(feature.id) }}
+
+        <li class="ticket-feature">
+          <div class="ticket-feature-title">
+            {{ feature.text }}
+          </div>
+
+          <div class="ticket-feature-value is-{{ ok ? 'included' : 'missing' }}">
+            {{ if ok }}
+              {{ "check-circle" |> icon }}
+            {{ else }}
+              {{ "x" |> icon("regular") }}
+            {{ /if }}
+          </div>
+        </li>
+        {{ /for }}
+      </ul>
+    </li>
+    {{ /for }}
+  </ul>
+</section>

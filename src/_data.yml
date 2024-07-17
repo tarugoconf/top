@@ -1,0 +1,23 @@
+title_suffix: TOP event
+metas:
+  title: =title
+  site: TRGCON 24
+  lang: es
+  twitter: 
+  color: '#00ab7d'
+  generator: true
+  image: /files/img-home.png
+state: pre-event
+cta:
+  text: Get your tickets
+  url: /tickets/
+footer:
+  logo: /files/logos/logo.png
+  copyright: "© 2024<br>\r\nCreated with [Lume](https://lume.land) & TOP Theme<br>\r\n[humans.txt](/humans.txt)\r\n"
+  menu:
+    - text: Legal terms
+      href: /legal-terms/
+    - text: Privacy
+      href: /privacy/
+    - text: Code of conduct
+      href: /code-of-conduct/
