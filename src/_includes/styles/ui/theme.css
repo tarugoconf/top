@@ -63,7 +63,7 @@
 
 /* Box variants */
 .box-border {
-  border: solid 2px var(--color-lines);
+  border: solid var(--border-weight) var(--color-lines);
   padding: 2.5rem;
 }
 .box-fill {

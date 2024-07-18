@@ -9,8 +9,7 @@
   --font-family-display: system-ui, sans-serif;
   --font-family-ui: system-ui, sans-serif;
   --font-scale: 1.2;
-  --font-weight-bold: 750;
-  --font-weight-bolder: 900;
+  --font-weight-bold: 600;
 
   @media (width < 1200px) { --font-scale: 1.15; }
   @media (width < 800px) { --font-scale: 1.1; }
@@ -53,6 +52,7 @@
   --line-height-medium: 1.3;
   --line-height-title: 1;
 
-  /* Border radius */
+  /* Borders */
   --border-radius-button: 28px;
+  --border-weight: 1px;
 }

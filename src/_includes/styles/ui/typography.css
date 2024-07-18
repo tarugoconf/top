@@ -1,35 +1,26 @@
-html {
-  font-family: var(--font-family-ui);
-  font-size: var(--font-1-size);
-  letter-spacing: var(--font-1-spacing);
-}
-
 /* Title title */
 .type-header {
   font-family: var(--font-family-ui);
   font-size: var(--font-9-size);
-  font-weight: var(--font-weight-bolder);
+  font-weight: var(--font-weight-bold);
   letter-spacing: var(--font-6-spacing);
   line-height: var(--line-height-title);
-  text-transform: uppercase;
   margin: 0;
 }
 .type-title {
   font-family: var(--font-family-ui);
   font-size: var(--font-6-size);
-  font-weight: var(--font-weight-bolder);
+  font-weight: var(--font-weight-bold);
   letter-spacing: var(--font-6-spacing);
   line-height: var(--line-height-title);
-  text-transform: uppercase;
   margin: 0;
 }
 .type-subtitle {
   font-family: var(--font-family-ui);
   font-size: var(--font-3-size);
-  font-weight: var(--font-weight-bolder);
+  font-weight: var(--font-weight-bold);
   letter-spacing: var(--font-3-spacing);
   line-height: var(--line-height-title);
-  text-transform: uppercase;
   margin: 0;
 }
 /* Normal text */

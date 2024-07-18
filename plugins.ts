@@ -11,28 +11,27 @@ import "lume/types.ts";
 
 export default function () {
   return (site: Lume.Site) => {
-    site.use(date());
-    site.copy("files");
-    site.copy("scripts");
-    site.use(lightningcss());
-    site.use(basePath());
-    site.use(metas());
-    site.use(icons({
-      name: "icon",
-      defaultType: "duotone",
-    }));
-    site.use(favicon({
-      input: "files/favicon.svg",
-    }));
-    site.use(filterPages({
-      fn: (page) =>
-        !page.data.only_state || (page.data.only_state === page.data.state),
-    }));
-
-    site.remoteFile(
-      "_includes/styles/reset.css",
-      "https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.css",
-    );
+    site.use(date())
+      .copy("files")
+      .copy("scripts")
+      .use(lightningcss())
+      .use(basePath())
+      .use(metas())
+      .use(icons({
+        name: "icon",
+        defaultType: "duotone",
+      }))
+      .use(favicon({
+        input: "files/favicon.svg",
+      }))
+      .use(filterPages({
+        fn: (page) =>
+          !page.data.only_state || (page.data.only_state === page.data.state),
+      }))
+      .remoteFile(
+        "_includes/styles/reset.css",
+        "https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.css",
+      );
 
     // Alert plugin
     site.hooks.addMarkdownItPlugin(alert);

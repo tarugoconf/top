@@ -6,6 +6,9 @@ html {
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-light);
   color: var(--color-dark);
+  font-family: var(--font-family-ui);
+  font-size: var(--font-1-size);
+  letter-spacing: var(--font-1-spacing);
 }
 
 body {
@@ -22,6 +25,18 @@ body {
 }
 h1, h2, h3 {
   text-wrap: balance;
+}
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: var(--font-weight-bold);
+}
+
+hr {
+  width: 100%;
+  display: block;
+  color: var(--color-primary);
+  border: none;
+  border-top: solid var(--border-weight);
+  margin: min(4rem, 5vh) 0;
 }
 
 :focus {

@@ -2,6 +2,7 @@
 
 @import "styles/reset.css" layer(reset);
 @import "styles/base.css" layer(reset);
+@import "styles/variables.css" layer(reset);
 
 /* Generic UI components */
 @import "styles/ui/accordion.css" layer(ui);
@@ -11,6 +12,8 @@
 @import "styles/ui/footer.css" layer(ui);
 @import "styles/ui/text.css" layer(ui);
 @import "styles/ui/markdown-alert.css" layer(ui);
+@import "styles/ui/typography.css" layer(ui);
+@import "styles/ui/theme.css" layer(ui);
 
 /* Blocks */
 @import "blocks/calendar/calendar.css" layer(ui);
@@ -29,10 +32,3 @@
 @import "blocks/video/video.css" layer(ui);
 @import "blocks/speakers/speakers.css" layer(ui);
 @import "blocks/tickets/tickets.css" layer(ui);
-
-/* Theme */
-@import "styles/theme/main.css" layer(theme);
-@import "styles/theme/variables.css" layer(theme);
-@import "styles/theme/typography.css" layer(theme);
-@import "styles/theme/variants.css" layer(theme);
-@import "./theme.css" layer(theme);
