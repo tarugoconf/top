@@ -29,6 +29,20 @@
   font-size: var(--font-2-size);
   letter-spacing: var(--font-2-spacing);
   line-height: var(--line-height-text);
+
+  & h2 {
+    font-size: var(--font-3-size);
+    letter-spacing: var(--font-3-spacing);
+    line-height: var(--line-height-medium);
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
+  & h3 {
+    font-size: var(--font-2-size);
+    letter-spacing: var(--font-2-spacing);
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
 }
 .type-txt-bold {
   font-family: var(--font-family-ui);

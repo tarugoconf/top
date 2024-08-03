@@ -1,5 +1,4 @@
 ---
-layout: layouts/text.vto
 title: Legal terms
 subtitle: Duis tempus id ante eget pulvinar
 menu:

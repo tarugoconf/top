@@ -1,18 +1,26 @@
 .block-text {
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: [start] minmax(0, 55em) [end];
   row-gap: 3rem;
+  justify-content: center;
 
   > * {
     grid-column: start / end;
   }
 
   > div {
-    column-width: 20em;
-    column-gap: 2em;
-
     p {
       margin: 0 0 1em 0;
+    }
+  }
+
+  &.has-columns {
+    grid-template-columns: subgrid;
+    max-width: none;
+
+    > div {
+      column-width: 20em;
+      column-gap: 2em;
     }
   }
 }

@@ -1,5 +1,4 @@
 ---
-layout: layouts/text.vto
 title: Privacy
 subtitle: Duis tempus id ante eget pulvinar
 menu:

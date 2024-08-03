@@ -8,6 +8,7 @@
   /* Fonts */
   --font-family-display: system-ui, sans-serif;
   --font-family-ui: system-ui, sans-serif;
+  --font-family-code: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   --font-scale: 1.2;
   --font-weight-bold: 600;
 

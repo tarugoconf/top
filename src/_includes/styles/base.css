@@ -61,3 +61,20 @@ hr {
     margin-top: 0;
   }
 }
+
+code {
+  font-family: var(--font-family-code);
+  font-size: 15px;
+  letter-spacing: 0;
+  background-color: var(--color-bg-code);
+  color: var(--color-text-code);
+  display: inline-block;
+  border-radius: 4px;
+  padding: .1em .25em;
+}
+
+pre > code {
+  display: block;
+  line-height: 1.4;
+  padding: .5em;
+}

@@ -1,0 +1,12 @@
+:root {
+  /* Colors */
+  --color-primary: hwb(250 20% 20%);
+  --color-secondary: hwb(193 60% 15%);
+  --color-dark: hwb(250 10% 70%);
+  --color-light: #FFE6E6;
+
+  /* Fonts */
+  --font-family-display: system-ui, sans-serif;
+  --font-family-ui: system-ui, sans-serif;
+  --font-weight-bold: 600;
+}

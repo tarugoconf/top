@@ -1,4 +1,4 @@
-<div id="{{ block.id }}" class="block-text theme {{ block.theme }}">
+<div id="{{ block.id }}" class="block-text theme {{ block.theme }} {{ block.columns ? 'has-columns' : '' }}">
   {{ if block.title }}
     <h2 class="type-title">{{ block.title }}</h2>
   {{ /if }}

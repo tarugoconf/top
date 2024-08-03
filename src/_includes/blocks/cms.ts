@@ -8,19 +8,27 @@ export const theme = {
       value: "is-light width-box box-fill",
     },
     {
-      label: "Green",
+      label: "Primary box",
       value: "is-primary width-box box-fill",
     },
     {
-      label: "Green full width",
+      label: "Primary full width",
       value: "is-primary width-full box-fill",
     },
     {
-      label: "Blue",
+      label: "Secondary box",
+      value: "is-secondary width-box box-fill",
+    },
+    {
+      label: "Secondary full width",
+      value: "is-secondary width-full box-fill",
+    },
+    {
+      label: "Dark box",
       value: "is-dark width-box box-fill",
     },
     {
-      label: "Blue full width",
+      label: "Dark full width",
       value: "is-dark width-full box-fill",
     },
     {

@@ -1,0 +1,22 @@
+title_suffix: TOP
+metas:
+  title: =title
+  site: TOP
+  lang: es
+  twitter: 
+  color: '#00ab7d'
+  generator: true
+  image: /files/img-home.png
+cta:
+  text: Ver un ejemplo
+  url: https://tarugoconf.github.io/top/
+footer:
+  logo: /files/logos/logo.png
+  copyright: "© 2024<br>\r\nCreated with [Lume](https://lume.land) & TOP Theme<br>\r\n[humans.txt](/humans.txt)\r\n"
+  menu:
+    - text: Top en Lume.land
+      href: https://lume.land/theme/top/
+    - text: Top en GitHub
+      href: https://github.com/tarugoconf/top
+    - text: Licencia
+      href: /license/

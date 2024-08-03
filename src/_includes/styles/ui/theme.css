@@ -25,6 +25,9 @@
   &.is-light {
     --color-bg: var(--color-light);
     --color-bg-hover: color-mix(in srgb, var(--color-primary), var(--color-bg) 80%);
+
+    --color-bg-code: color-mix(in srgb, var(--color-bg), black 10%);
+    --color-text-code: var(--color-text);
     
     --color-icons: var(--color-primary);
     --color-titles: var(--color-primary);
@@ -34,9 +37,29 @@
     --color-button-bg: var(--color-secondary);
     --color-button-text: var(--color-dark);
   }
+
+  &.is-secondary {
+    --color-bg: var(--color-secondary);
+    --color-bg-hover: color-mix(in srgb, var(--color-secondary), var(--color-bg) 80%);
+
+    --color-bg-code: color-mix(in srgb, var(--color-bg), white 20%);
+    --color-text-code: var(--color-text);
+    
+    --color-icons: var(--color-primary);
+    --color-titles: var(--color-primary);
+    --color-lines: var(--color-primary);
+    --color-text: var(--color-dark);
+    --color-links: var(--color-dark);
+    --color-button-bg: var(--color-primary);
+    --color-button-text: var(--color-light);
+  }
   
   &.is-primary {
     --color-bg: var(--color-primary);
+
+    --color-bg-code: color-mix(in srgb, var(--color-bg), black 10%);
+    --color-text-code: var(--color-text);
+
     --color-titles: var(--color-dark);
     --color-lines: var(--color-light);
     --color-text: white;
@@ -45,6 +68,10 @@
   
   &.is-dark {
     --color-bg: var(--color-dark);
+
+    --color-bg-code: color-mix(in srgb, var(--color-bg), white 10%);
+    --color-text-code: var(--color-text);
+
     --color-titles: var(--color-primary);
     --color-lines: var(--color-primary);
     --color-text: var(--color-light);
