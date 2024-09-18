@@ -2,6 +2,7 @@ export const theme = {
   label: "Style",
   name: "theme",
   type: "select",
+  value: "is-light width-box box-fill",
   options: [
     {
       label: "Default",
