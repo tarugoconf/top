@@ -6,8 +6,12 @@ menu:
 blocks:
   - type: header
     title: Get your tickets
-    description: |
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin elementum maximus. Morbi venenatis eros sit amet ultrices venenatis. Etiam id lectus lorem. Nulla porta, purus eget molestie pulvinar, nulla purus vehicula sem, eget ultrices arcu felis sit amet lacus. 
+    description: >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      sollicitudin elementum maximus. Morbi venenatis eros sit amet ultrices
+      venenatis. Etiam id lectus lorem. Nulla porta, purus eget molestie
+      pulvinar, nulla purus vehicula sem, eget ultrices arcu felis sit amet
+      lacus. 
   - type: tickets
     id: tickets
     features:
@@ -17,7 +21,6 @@ blocks:
         text: Streaming access
       - id: tshirt
         text: Tshirt
-
     tickets:
       - name: Type 1
         pricing: 20€ + IVA
@@ -50,3 +53,5 @@ blocks:
           - streaming
           - tshirt
 title: Tickets
+metas:
+  image: ''

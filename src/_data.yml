@@ -3,17 +3,20 @@ metas:
   title: =title
   site: TRGCON 24
   lang: es
-  twitter: 
+  twitter: null
   color: '#00ab7d'
   generator: true
   image: /files/img-home.png
-state: pre-event
+state: post-event
 cta:
   text: Get your tickets
   url: /tickets/
 footer:
   logo: /files/logos/logo.png
-  copyright: "© 2024<br>\r\nCreated with [Lume](https://lume.land) & TOP Theme<br>\r\n[humans.txt](/humans.txt)\r\n"
+  copyright: |
+    © 2024<br>
+    Created with [Lume](https://lume.land) & TOP Theme<br>
+    [humans.txt](/humans.txt)
   menu:
     - text: Legal terms
       href: /legal-terms/

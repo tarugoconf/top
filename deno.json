@@ -1,7 +1,7 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.3.2/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.3/"
+    "lume/": "https://deno.land/x/lume@v2.3.3/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@v0.6.8/"
   },
   "lock": false,
   "tasks": {

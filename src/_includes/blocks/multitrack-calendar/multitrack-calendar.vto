@@ -1,0 +1,34 @@
+<section id="{{ block.id }}" class="block-multitrack-calendar theme is-light width-box fox-fill">
+  <div>
+    <header>
+      <h2 class="type-title">{{ block.title }}</h2>
+    </header>
+
+    {{ for day of block.days }}
+    <div class="event-list">
+      <h3 class="type-subtitle">{{ day.title }}</h3>
+
+      <div class="event-tracks" style="--tracks:[{{ day.tracks.map(t => `${t.id}-start] auto [${t.id}-end`).join(" ") }}]">
+        {{ for track of day.tracks }}
+          <h4 style="--track:{{ track.id }}">{{ track.title }}</h4>
+        {{ /for }}
+
+        {{ for event of day.events }}
+        <div class="event" id="{{ event.id }}" style="--track:{{ event.track || '1 / -1' }};">
+          <div class="event-header">
+            <time class="event-time type-caption">{{ event.time }}</time>
+            <strong class="event-title type-txt-bold">{{ event.title }}</strong>
+
+            {{ if event.subtitle }}
+              <p class="event-subtitle type-caption">
+                {{ event.subtitle }}
+              </p>
+            {{ /if }}
+          </div>
+        </div>
+        {{ /for }}
+      </div>
+    </div>
+    {{ /for }}
+  </div>
+</section>

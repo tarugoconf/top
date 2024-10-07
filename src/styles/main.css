@@ -32,3 +32,4 @@
 @import "blocks/video/video.css" layer(ui);
 @import "blocks/speakers/speakers.css" layer(ui);
 @import "blocks/tickets/tickets.css" layer(ui);
+@import "blocks/multitrack-calendar/multitrack-calendar.css" layer(ui);

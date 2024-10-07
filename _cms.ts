@@ -16,6 +16,7 @@ import ticketsBlock from "./src/_includes/blocks/tickets/fields.ts";
 import peopleBlock from "./src/_includes/blocks/people/fields.ts";
 import activitiesBlock from "./src/_includes/blocks/activities/fields.ts";
 import headerBlock from "./src/_includes/blocks/header/fields.ts";
+import multiTrackCalendarBlock from "./src/_includes/blocks/multitrack-calendar/fields.ts";
 
 const blocks = {
   type: "choose-list",
@@ -26,6 +27,7 @@ const blocks = {
     activitiesBlock,
     contactBlock,
     calendarBlock,
+    multiTrackCalendarBlock,
     faqBlock,
     heroBlock,
     imageTextBlock,
@@ -44,6 +46,7 @@ const metas = {
   type: "object",
   name: "metas",
   description: "Meta tags for SEO and social media sharing",
+  view: "more",
   fields: [
     "title: text",
     "description: text",
@@ -54,10 +57,19 @@ const metas = {
     },
   ],
 };
+
+const styles = {
+  type: "code",
+  name: "extra_head",
+  description: "Extra HTML code to include in the head of the page",
+  view: "more",
+};
+
 const menu = {
   type: "object-list",
   name: "menu",
   description: "Items for the menu bar",
+  view: "more",
   fields: [
     "text: text",
     "url: text",
@@ -80,25 +92,28 @@ const state = {
 
 const cms = lumeCMS();
 
-cms.document("Home", "src:index.yml", [
-  "title: text",
-  metas,
-  state,
-  menu,
-  blocks,
-]);
-
-cms.collection("Pages", "src:block_pages/*.yml", [
-  "title: text",
-  metas,
-  state,
-  menu,
-  blocks,
-]);
+cms.collection({
+  name: "Pages",
+  store: "src:block_pages/*.yml",
+  fields: [
+    "title: text",
+    {
+      name: "url",
+      type: "text",
+      description: "Public URL of the page",
+    },
+    styles,
+    metas,
+    state,
+    menu,
+    blocks,
+  ],
+});
 
 cms.collection("Legal pages", "src:pages/*.md", [
   "title: text",
   state,
+  styles,
   "subtitle: text",
   "content: markdown",
 ]);
