@@ -1,7 +1,7 @@
 url: /
 metas:
   image: ''
-only_state: post-event
+only_state: pre-event
 menu:
   - text: Location
     url: '#location'

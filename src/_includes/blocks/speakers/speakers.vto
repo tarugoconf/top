@@ -27,12 +27,12 @@
 </section>
 
 {{ for speaker of block.speakers }}
-  <dialog class="speaker-modal theme is-light" id="dialog-{{ speaker.id }}">
-    <button data-close class="speaker-modal-close" aria-label="Cerrar">
+  <dialog class="modal theme is-light" id="dialog-{{ speaker.id }}">
+    <button data-close class="modal-close" aria-label="Cerrar">
       {{ "x" |> icon("regular") }}
     </button>
     
-    <div class="speaker-modal-content">
+    <div class="modal-content">
       <header class="speaker-modal-header">
         <div class="speaker-modal-photo">
           <img src="{{ speaker.image }}">

@@ -10,6 +10,8 @@ import filterPages from "lume/plugins/filter_pages.ts";
 
 import "lume/types.ts";
 
+let id = 0;
+
 export default function () {
   return (site: Lume.Site) => {
     site.use(date())
@@ -18,6 +20,7 @@ export default function () {
       .use(lightningcss())
       .use(basePath())
       .use(metas())
+      .data("counter", () => id++)
       .use(icons({
         name: "icon",
         defaultType: "duotone",

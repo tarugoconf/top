@@ -37,9 +37,18 @@
   cursor: pointer;
   align-items: center;
   row-gap: .25rem;
+  background: none;
+  text-align: left;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 
   &:has(.event-subtitle) {
     grid-template-areas: "time title" ". subtitle";
+  }
+  &:is(button:hover) {
+    background-color: color-mix(in srgb, var(--color-light), white 50%);
   }
 }
 .event-time {

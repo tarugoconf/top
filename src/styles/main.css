@@ -7,6 +7,7 @@
 /* Generic UI components */
 @import "styles/ui/accordion.css" layer(ui);
 @import "styles/ui/button.css" layer(ui);
+@import "styles/ui/modal.css" layer(ui);
 @import "styles/ui/badge.css" layer(ui);
 @import "styles/ui/navbar.css" layer(ui);
 @import "styles/ui/footer.css" layer(ui);

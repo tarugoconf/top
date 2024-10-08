@@ -242,4 +242,4 @@ blocks:
 metas:
   image: ''
 url: /
-only_state: pre-event
+only_state: post-event

@@ -49,61 +49,6 @@
   max-width: 100%;
 }
 
-
-.speaker-modal {
-  text-align: left;
-  max-width: 50em;
-  max-height: 100vh;
-  padding: 0;
-  margin: auto;
-  border: none;
-  box-shadow: 0 0 100px #0003;
-
-  &[open] {
-    animation: showModal .3s;
-    animation-fill-mode: both;
-  }
-}
-
-@keyframes showModal {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.speaker-modal-content {
-  max-height: 100vh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-.speaker-modal-close {
-  --color-icons: white;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  background: var(--color-primary);
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  transition: background .2s, color .2s;
-
-  & svg {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-  }
-
-  &:hover {
-    background: color-mix(in srgb, var(--color-primary), black 10%);
-  }
-}
 .speaker-modal-header {
   display: grid;
   grid-template-areas: "image" "title" "links";
