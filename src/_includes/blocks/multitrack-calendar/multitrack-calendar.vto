@@ -8,7 +8,7 @@
     <div class="event-list">
       <h3 class="type-subtitle">{{ day.title }}</h3>
 
-      <div class="event-tracks" style="--tracks:[{{ day.tracks.map(t => `${t.id}-start] auto [${t.id}-end`).join(" ") }}]">
+      <div class="event-tracks" style="--tracks:[{{ day.tracks.map(t => `${t.id}-start] minmax(10em, auto) [${t.id}-end`).join(" ") }}]">
         {{ for track of day.tracks }}
           <h4 class="type-subtitle event-track-title" style="--track:{{ track.id }}">{{ track.title }}</h4>
         {{ /for }}

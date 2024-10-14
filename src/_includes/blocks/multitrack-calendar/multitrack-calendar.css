@@ -8,6 +8,17 @@
   display: grid;
   grid-template-columns: var(--tracks);
   gap: .5rem;
+  overflow-x: auto;
+
+  @media (width < 600px) {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-icons) var(--color-bg);
+  }
 
   > * {
     grid-column: var(--track, 1 / -1);

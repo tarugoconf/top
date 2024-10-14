@@ -47,6 +47,17 @@ blocks:
           - time: '13:00'
             title: cafe
             speakers: []
+      - title: Día 2
+        tracks:
+          - title: Sala 2
+            id: sala-2
+          - title: Sala 3
+            id: sala-3
+        events:
+          - time: '12:00'
+            title: Evento novo
+            track: sala-2
+            speakers: []
   - type: text
     title: Awesome TOP event
     theme: is-light width-box box-border
