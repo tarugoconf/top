@@ -21,6 +21,7 @@ export default function () {
       "_includes/styles/ui/markdown-alert.css",
       "_includes/styles/ui/navbar.css",
       "_includes/styles/ui/text.css",
+      "_includes/styles/ui/modal.css",
       "_includes/styles/variables.css",
       "_includes/styles/base.css",
       "_includes/templates/footer.vto",
@@ -35,6 +36,7 @@ export default function () {
     const blocks = [
       "activities",
       "calendar",
+      "multitrack-calendar",
       "contact",
       "faq",
       "header",
