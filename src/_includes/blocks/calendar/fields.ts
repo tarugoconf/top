@@ -3,6 +3,7 @@ export default {
   name: "calendar",
   fields: [
     "title: text",
+    "description: markdown",
     "id: text",
     {
       type: "object-list",

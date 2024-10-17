@@ -2,6 +2,10 @@
   <div>
     <header>
       <h2 class="type-title">{{ block.title }}</h2>
+
+      <div class="type-txt">
+        {{ block.description |> md }}
+      </div>
     </header>
 
     {{ for day of block.days }}

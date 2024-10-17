@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] - 2024-10-17
+### Added
+- New multitracking calendar block.
+
+### Changed
+- BREAKING: Moved the index.md page to `block_pages` directory. This allows to duplicate the homepage to create several versions.
+
+### Fixed
+- CSS tweaks.
+
 ## [0.1.4] - 2024-09-18
 ### Fixed
 - Default values for blocks
@@ -29,6 +39,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.1.0] - 2024-07-17
 First version
 
+[0.2.0]: https://github.com/tarugoconf/TOP/compare/v0.1.4...v0.2.0
 [0.1.4]: https://github.com/tarugoconf/TOP/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/tarugoconf/TOP/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/tarugoconf/TOP/compare/v0.1.1...v0.1.2

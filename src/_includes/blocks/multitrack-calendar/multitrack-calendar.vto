@@ -2,6 +2,10 @@
   <div>
     <header>
       <h2 class="type-title">{{ block.title }}</h2>
+
+      <div class="type-txt">
+        {{ block.description |> md }}
+      </div>
     </header>
 
     {{ for day of block.days }}
@@ -10,7 +14,7 @@
 
       <div class="event-tracks" style="--tracks:[{{ day.tracks.map(t => `${t.id}-start] minmax(10em, auto) [${t.id}-end`).join(" ") }}]">
         {{ for track of day.tracks }}
-          <h4 class="type-subtitle event-track-title" style="--track:{{ track.id }}">{{ track.title }}</h4>
+          <h4 class="type-short-bold event-track-title" style="--track:{{ track.id }}">{{ track.title }}</h4>
         {{ /for }}
 
         {{ for event of day.events }}
