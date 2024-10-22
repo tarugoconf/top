@@ -1,12 +1,23 @@
 :root {
   /* Colors */
-  --color-primary: hwb(250 20% 20%);
-  --color-secondary: hwb(193 60% 15%);
+  --color-primary: #2a4ba4;
+  --color-secondary: #ffa8c6;
   --color-dark: hwb(250 10% 70%);
-  --color-light: #FFE6E6;
+  --color-light: white;
 
   /* Fonts */
   --font-family-display: system-ui, sans-serif;
   --font-family-ui: system-ui, sans-serif;
   --font-weight-bold: 600;
+}
+
+.block-hero-header {
+  h1 {
+    opacity: 0;
+  }
+  img {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+  }
 }

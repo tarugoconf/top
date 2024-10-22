@@ -8,7 +8,19 @@ menu:
 blocks:
   - type: hero
     title: Top
-    intro: Crea la web de tu evento tecnológico<br> en segundos
+    intro: "![top](/top.svg)\r\nCrea la web de tu evento tecnológico<br> en segundos\r\n"
+  - type: logos
+    title: Apoyado por
+    size: small
+    items:
+      - alt: TRG
+        img: /files/logo-duotone.svg
+        url: 'https://trgcon.com/'
+        description: TRGCON
+      - alt: SCPNA
+        img: /files/SCPNA.svg
+        url: 'https://pamplonaswcraft.com/'
+        description: Pamplona Software Crafters
   - type: text
     theme: is-light width-box box-fill
     columns: false
