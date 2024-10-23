@@ -21,6 +21,13 @@ blocks:
         img: /files/SCPNA.svg
         url: 'https://pamplonaswcraft.com/'
         description: Pamplona Software Crafters
+      - alt: T3chFest
+        img: /files/t3chfest.svg
+        url: 'https://t3chfest.es/'
+        description: T3chFest
+      - img: /files/morcillaconf.png
+        url: 'https://morcillaconf.es/'
+        description: MorcillaConf
   - type: text
     theme: is-light width-box box-fill
     columns: false
