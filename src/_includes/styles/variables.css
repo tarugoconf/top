@@ -8,14 +8,19 @@
   /* Fonts */
   --font-family-display: system-ui, sans-serif;
   --font-family-ui: system-ui, sans-serif;
-  --font-family-code: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  --font-family-code:
+    ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   --font-scale: 1.2;
   --font-weight-bold: 600;
 
-  @media (width < 1200px) { --font-scale: 1.15; }
-  @media (width < 800px) { --font-scale: 1.1; }
+  @media (width < 1200px) {
+    --font-scale: 1.15;
+  }
+  @media (width < 800px) {
+    --font-scale: 1.1;
+  }
 
-  --font-0-size: .875rem;
+  --font-0-size: 0.875rem;
   --font-0-spacing: 0;
 
   --font-1-size: 1rem;

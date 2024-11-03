@@ -4,7 +4,7 @@
   row-gap: 2rem;
   column-gap: 4rem;
   align-items: start;
-  
+
   @media (width > 1050px) {
     grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
   }
@@ -42,7 +42,7 @@
   }
 
   & h3 {
-    margin: 1em 0 .3em;
+    margin: 1em 0 0.3em;
   }
 
   & p {
@@ -55,6 +55,6 @@
     height: var(--img-size);
     object-fit: cover;
     filter: saturate(0);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 }

@@ -11,7 +11,7 @@ blocks:
       sollicitudin elementum maximus. Morbi venenatis eros sit amet ultrices
       venenatis. Etiam id lectus lorem. Nulla porta, purus eget molestie
       pulvinar, nulla purus vehicula sem, eget ultrices arcu felis sit amet
-      lacus. 
+      lacus.
   - type: tickets
     id: tickets
     features:
@@ -27,7 +27,7 @@ blocks:
         img: /files/tickets/ticket.png
         buy:
           text: Buy now
-          url: '#'
+          url: "#"
           disabled: false
         features:
           - welcome_pack
@@ -36,7 +36,7 @@ blocks:
         img: /files/tickets/ticket.png
         buy:
           text: Buy now
-          url: '#'
+          url: "#"
           disabled: false
         features:
           - welcome_pack
@@ -46,7 +46,7 @@ blocks:
         img: /files/tickets/ticket.png
         buy:
           text: Coming soon
-          url: '#'
+          url: "#"
           disabled: true
         features:
           - welcome_pack
@@ -54,4 +54,4 @@ blocks:
           - tshirt
 title: Tickets
 metas:
-  image: ''
+  image: ""

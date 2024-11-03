@@ -15,23 +15,23 @@
     letter-spacing: var(--font-4-spacing);
     line-height: var(--line-height-medium);
     margin-top: 2em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
   & h3 {
     font-size: var(--font-3-size);
     letter-spacing: var(--font-3-spacing);
     margin-top: 2em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
   & h4 {
     font-size: var(--font-2-size);
     letter-spacing: var(--font-2-spacing);
     margin-top: 2em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
 
   & p {
-    margin: .5em 0;
+    margin: 0.5em 0;
   }
 
   & > :first-child,

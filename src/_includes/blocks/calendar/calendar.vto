@@ -17,7 +17,13 @@
         <summary>
           <div class="event-header">
             <time class="event-time type-caption">{{ event.time }}</time>
-            <strong class="event-title type-txt-bold">{{ event.title }}</strong>
+            <strong class="event-title type-short-m-bold">
+              {{ if event.label }}
+              <span class="badge">{{ event.label }}</span>
+              {{ /if }}
+
+              {{ event.title }}
+            </strong>
 
             {{ if event.subtitle }}
               <p class="event-subtitle type-caption">

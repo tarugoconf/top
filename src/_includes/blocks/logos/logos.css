@@ -1,7 +1,7 @@
 .block-logos {
   display: grid;
   grid-template-columns: subgrid;
-  
+
   > * {
     grid-column: start / end;
   }
@@ -15,7 +15,6 @@
   display: block;
   margin: 4em auto 0;
   max-width: 100%;
-
 }
 
 .block-logos-list {

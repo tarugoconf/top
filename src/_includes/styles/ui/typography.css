@@ -35,13 +35,13 @@
     letter-spacing: var(--font-3-spacing);
     line-height: var(--line-height-medium);
     margin-top: 2em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
   & h3 {
     font-size: var(--font-2-size);
     letter-spacing: var(--font-2-spacing);
     margin-top: 2em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
 
   & p {

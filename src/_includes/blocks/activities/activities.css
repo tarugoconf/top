@@ -11,7 +11,7 @@
 
   > li {
     background: white;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     overflow: hidden;
     container-type: inline-size;
 
@@ -30,10 +30,10 @@
   }
 
   .activity-tags {
-    margin: 0 0 .5em 0;
+    margin: 0 0 0.5em 0;
     display: flex;
     flex-wrap: wrap;
-    gap: .3em;
+    gap: 0.3em;
   }
 
   .activity-image {

@@ -8,7 +8,7 @@
   box-shadow: 0 0 100px #0003;
 
   &[open] {
-    animation: showModal .3s;
+    animation: showModal 0.3s;
     animation-fill-mode: both;
   }
 }
@@ -41,7 +41,7 @@
   border: none;
   padding: 1rem;
   cursor: pointer;
-  transition: background .2s, color .2s;
+  transition: background 0.2s, color 0.2s;
 
   & svg {
     display: block;

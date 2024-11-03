@@ -12,7 +12,7 @@
     column-width: 20em;
     column-gap: 2rem;
   }
-  
+
   @media (width > 1050px) {
     > div {
       grid-column: start / center;
@@ -32,7 +32,7 @@
     max-width: 500px;
     aspect-ratio: 3 / 2;
     border: solid 1px var(--color-secondary);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     outline: 0;
     box-shadow: 0 4px 8px -2px #0003;
     margin: auto;

@@ -5,6 +5,7 @@ export default {
     "title: text",
     "description: markdown",
     "id: text",
+    "fullwidth: checkbox",
     {
       type: "object-list",
       name: "days",
@@ -25,6 +26,7 @@ export default {
             "time: text",
             "title: text",
             "id: text",
+            "label: text",
             "subtitle: text",
             "track: text",
             "description: markdown",

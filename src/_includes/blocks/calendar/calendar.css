@@ -1,7 +1,7 @@
 .block-calendar {
   display: grid;
   grid-template-columns: subgrid;
-  
+
   > div {
     display: grid;
     grid-column: start / end;
@@ -11,15 +11,15 @@
 }
 .event-list {
   display: grid;
-  row-gap: .5rem;
+  row-gap: 0.5rem;
 }
 .event {
   background-color: white;
   overflow: hidden;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
   &:first-of-type {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 }
 .event summary {
@@ -34,9 +34,8 @@
   display: grid;
   grid-template-columns: min(150px, 33%) 1fr;
   grid-template-areas: "time title";
-  cursor: pointer;
   align-items: center;
-  row-gap: .25rem;
+  row-gap: 0.25rem;
   background: none;
   text-align: left;
   border: 0;
@@ -47,6 +46,10 @@
   &:has(.event-subtitle) {
     grid-template-areas: "time title" ". subtitle";
   }
+  &:is(summary > div),
+  &:is(button) {
+    cursor: pointer;
+  }
   &:is(button:hover) {
     background-color: color-mix(in srgb, var(--color-light), white 50%);
   }
@@ -56,7 +59,8 @@
 }
 .event-title {
   grid-area: title;
-
+  word-break: break-word;
+  hyphens: auto;
 }
 .event-subtitle {
   grid-area: subtitle;
@@ -99,7 +103,7 @@
     margin: 0;
     border: none;
     background: none;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     max-width: 300px;
     text-align: left;

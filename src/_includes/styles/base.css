@@ -17,7 +17,11 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100vh;
-  grid-template-columns: minmax(2rem, 1fr) [start] minmax(0, 617px) [center] minmax(0, 617px) [end] minmax(2rem, 1fr);
+  grid-template-columns:
+    minmax(2rem, 1fr) [start] minmax(0, 617px) [center] minmax(
+    0,
+    617px
+  ) [end] minmax(2rem, 1fr);
 
   > * {
     grid-column: 1 / -1;
@@ -70,11 +74,11 @@ code {
   color: var(--color-text-code);
   display: inline-block;
   border-radius: 4px;
-  padding: .1em .25em;
+  padding: 0.1em 0.25em;
 }
 
 pre > code {
   display: block;
   line-height: 1.4;
-  padding: .5em;
+  padding: 0.5em;
 }

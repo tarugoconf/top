@@ -18,17 +18,25 @@
     border-radius: var(--border-radius-button);
 
     &:hover {
-      background-color: color-mix(in srgb, var(--color-button-bg), var(--color-button-text) 20%);
+      background-color: color-mix(
+        in srgb,
+        var(--color-button-bg),
+        var(--color-button-text) 20%
+      );
     }
   }
 
   &.is-light {
     --color-bg: var(--color-light);
-    --color-bg-hover: color-mix(in srgb, var(--color-primary), var(--color-bg) 80%);
+    --color-bg-hover: color-mix(
+      in srgb,
+      var(--color-primary),
+      var(--color-bg) 80%
+    );
 
     --color-bg-code: color-mix(in srgb, var(--color-bg), black 10%);
     --color-text-code: var(--color-text);
-    
+
     --color-icons: var(--color-primary);
     --color-titles: var(--color-primary);
     --color-lines: var(--color-primary);
@@ -40,11 +48,15 @@
 
   &.is-secondary {
     --color-bg: var(--color-secondary);
-    --color-bg-hover: color-mix(in srgb, var(--color-secondary), var(--color-bg) 80%);
+    --color-bg-hover: color-mix(
+      in srgb,
+      var(--color-secondary),
+      var(--color-bg) 80%
+    );
 
     --color-bg-code: color-mix(in srgb, var(--color-bg), white 20%);
     --color-text-code: var(--color-text);
-    
+
     --color-icons: var(--color-primary);
     --color-titles: var(--color-primary);
     --color-lines: var(--color-primary);
@@ -53,7 +65,7 @@
     --color-button-bg: var(--color-primary);
     --color-button-text: var(--color-light);
   }
-  
+
   &.is-primary {
     --color-bg: var(--color-primary);
 
@@ -65,7 +77,7 @@
     --color-text: white;
     --color-links: var(--color-light);
   }
-  
+
   &.is-dark {
     --color-bg: var(--color-dark);
 

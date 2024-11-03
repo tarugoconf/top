@@ -17,6 +17,7 @@ export default {
             "time: text",
             "title: text",
             "id: text",
+            "label: text",
             "subtitle: text",
             "description: markdown",
             {

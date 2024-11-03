@@ -3,8 +3,8 @@ metas:
   title: =title
   site: TOP
   lang: es
-  twitter: 
-  color: '#00ab7d'
+  twitter:
+  color: "#00ab7d"
   generator: true
   image: /files/img-home.png
 cta:

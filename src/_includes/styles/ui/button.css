@@ -1,6 +1,6 @@
 .button {
   display: inline-flex;
-  column-gap: .5em;
+  column-gap: 0.5em;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -21,7 +21,7 @@
   &:disabled,
   &[aria-disabled="true"] {
     cursor: default;
-    opacity: .33;
+    opacity: 0.33;
     pointer-events: none;
   }
 

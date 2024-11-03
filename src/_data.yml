@@ -4,7 +4,7 @@ metas:
   site: TRGCON 24
   lang: es
   twitter: null
-  color: '#00ab7d'
+  color: "#00ab7d"
   generator: true
   image: /files/img-home.png
 state: post-event

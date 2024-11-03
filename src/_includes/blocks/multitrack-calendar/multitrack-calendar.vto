@@ -1,4 +1,4 @@
-<section id="{{ block.id }}" class="block-calendar theme is-light width-box fox-fill">
+<section id="{{ block.id }}" class="block-calendar theme is-light box-fill {{ block.fullwidth ? 'width-full' : 'width-box' }}">
   <div>
     <header>
       <h2 class="type-title">{{ block.title }}</h2>
@@ -7,22 +7,49 @@
         {{ block.description |> md }}
       </div>
     </header>
+  </div>
 
-    {{ for day of block.days }}
-    <div class="event-list">
-      <h3 class="type-subtitle">{{ day.title }}</h3>
+  {{ for day of block.days }}
+  <div class="event-list">
+    <h3 class="type-subtitle">{{ day.title }}</h3>
 
-      <div class="event-tracks" style="--tracks:[{{ day.tracks.map(t => `${t.id}-start] minmax(10em, auto) [${t.id}-end`).join(" ") }}]">
-        {{ for track of day.tracks }}
-          <h4 class="type-short-bold event-track-title" style="--track:{{ track.id }}">{{ track.title }}</h4>
-        {{ /for }}
+    <div class="event-tracks" style="--tracks:[{{ day.tracks.map(t => `${t.id}-start] minmax(10em, auto) [${t.id}-end`).join(" ") }}]">
+      {{ for track of day.tracks }}
+        <h4 class="type-short-bold event-track-title" style="--track:{{ track.id }}">{{ track.title }}</h4>
+      {{ /for }}
 
-        {{ for event of day.events }}
-        {{ set id = `dialog-${counter()}` }}
-        <div class="event" id="{{ event.id }}" style="--track:{{ event.track || '1 / -1' }};">
+      {{ for event of day.events }}
+      {{ set id = `dialog-${counter()}` }}
+      {{ set hasContent = !!(event.description || event.speakers?.length) }}
+
+      <div class="event" id="{{ event.id }}" style="--track:{{ event.track || '1 / -1' }};">
+        {{ if !hasContent }}
+          <div class="event-header">
+            <time class="event-time type-caption">{{ event.time }}</time>
+            <strong class="event-title type-short-m-bold">
+              {{ if event.label }}
+              <span class="badge">{{ event.label }}</span>
+              {{ /if }}
+
+              {{ event.title }}
+            </strong>
+
+            {{ if event.subtitle }}
+              <p class="event-subtitle type-caption">
+                {{ event.subtitle }}
+              </p>
+            {{ /if }}
+          </div>
+        {{ else }}
           <button data-open="{{ id }}" class="event-header">
             <time class="event-time type-caption">{{ event.time }}</time>
-            <strong class="event-title type-txt-bold">{{ event.title }}</strong>
+            <strong class="event-title type-short-m-bold">
+              {{ if event.label }}
+              <span class="badge">{{ event.label }}</span>
+              {{ /if }}
+
+              {{ event.title }}
+            </strong>
 
             {{ if event.subtitle }}
               <p class="event-subtitle type-caption">
@@ -54,7 +81,7 @@
                 {{ event.description |> md }}
               </div>
 
-              {{ if event.speakers }}
+              {{ if event.speakers?.length }}
                 {{ set speakers = blocks
                     .filter((block) => block.type === "speakers")
                     .shift()?.speakers
@@ -77,10 +104,10 @@
               {{ /if }}
             </div>
           </dialog>
-        </div>
-        {{ /for }}
+        {{ /if }}
       </div>
+      {{ /for }}
     </div>
-    {{ /for }}
   </div>
+  {{ /for }}
 </section>

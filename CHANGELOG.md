@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.2.1] - 2024-11-03
+### Added
+- Labels to calendar events.
+- Fullwidth option to multitracking calendar.
+
+### Fixed
+- Event distributions in multitracking calendar.
+- Style tweaks.
+- Events without content are not clickable.
+
 ## [0.2.0] - 2024-10-17
 ### Added
 - New multitracking calendar block.
@@ -39,6 +49,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.1.0] - 2024-07-17
 First version
 
+[0.2.1]: https://github.com/tarugoconf/TOP/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/tarugoconf/TOP/compare/v0.1.4...v0.2.0
 [0.1.4]: https://github.com/tarugoconf/TOP/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/tarugoconf/TOP/compare/v0.1.2...v0.1.3

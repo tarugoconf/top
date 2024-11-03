@@ -1,9 +1,9 @@
 menu:
   - text: Documentación
-    url: '#install'
+    url: "#install"
     highlight: false
   - text: Repositorio
-    url: 'https://github.com/tarugoconf/top'
+    url: "https://github.com/tarugoconf/top"
     highlight: false
 blocks:
   - type: hero
@@ -15,18 +15,18 @@ blocks:
     items:
       - alt: TRG
         img: /files/logo-duotone.svg
-        url: 'https://trgcon.com/'
+        url: "https://trgcon.com/"
         description: TRGCON
       - alt: SCPNA
         img: /files/SCPNA.svg
-        url: 'https://pamplonaswcraft.com/'
+        url: "https://pamplonaswcraft.com/"
         description: Pamplona Software Crafters
       - alt: T3chFest
         img: /files/t3chfest.svg
-        url: 'https://t3chfest.es/'
+        url: "https://t3chfest.es/"
         description: T3chFest
       - img: /files/morcillaconf.png
-        url: 'https://morcillaconf.es/'
+        url: "https://morcillaconf.es/"
         description: MorcillaConf
   - type: text
     theme: is-light width-box box-fill
@@ -64,5 +64,5 @@ blocks:
           amet, consectetur adipiscing elit. Morbi at odio venenatis, laoreet
           libero ut, lobortis ipsum.
 metas:
-  image: ''
+  image: ""
 url: /
