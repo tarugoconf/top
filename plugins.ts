@@ -40,7 +40,11 @@ export default function () {
           if (
             page.data.only_state && (page.data.only_state !== page.data.state)
           ) {
-            page.data.url = `/${page.data.state}${page.data.url}`;
+            const prefix = page.src.path.replaceAll("/", "-");
+            page.data.url = page.outputPath.replace(
+              "index.html",
+              prefix + ".html",
+            );
           }
         }
       });
