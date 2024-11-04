@@ -87,6 +87,7 @@ const state = {
     { label: "Before the event", value: "pre-event" },
     { label: "During the event", value: "event" },
     { label: "After the event", value: "post-event" },
+    { label: "Never", value: "never" },
   ],
 };
 
