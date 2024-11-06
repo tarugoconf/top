@@ -1,0 +1,7 @@
+[build]
+  publish = "web/_site"
+  command = """
+  curl -fsSL https://deno.land/install.sh | sh && \
+  cd web && \
+  /opt/buildhome/.deno/bin/deno task build \
+"""
