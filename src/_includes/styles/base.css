@@ -81,4 +81,5 @@ pre > code {
   display: block;
   line-height: 1.4;
   padding: 0.5em;
+  overflow-x: auto;
 }
