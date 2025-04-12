@@ -15,8 +15,9 @@ let id = 0;
 export default function () {
   return (site: Lume.Site) => {
     site.use(date())
-      .copy("files")
-      .copy("scripts")
+      .add("files")
+      .add("scripts")
+      .add([".css"])
       .use(lightningcss())
       .use(basePath())
       .use(metas())
