@@ -171,6 +171,6 @@ cms.document("Humans.txt", "src:humans.vto", [
   "content: code",
 ]);
 
-cms.upload("Uploads", "src:files");
+cms.upload("uploads", "src:files");
 
 export default cms;

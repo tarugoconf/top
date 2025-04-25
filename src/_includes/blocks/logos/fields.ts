@@ -20,7 +20,7 @@ export default {
           type: "file",
           name: "img",
           label: "Image",
-          upload: "src:files/logos",
+          upload: "uploads:logos",
         },
         "url: url",
         "description: text",

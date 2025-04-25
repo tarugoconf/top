@@ -15,7 +15,7 @@ export default {
           type: "file",
           name: "img",
           label: "Image",
-          upload: "src:files/people",
+          upload: "uploads:people",
         },
         "url: url",
         "description: text",
