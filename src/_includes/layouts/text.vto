@@ -2,7 +2,7 @@
 layout: ./base.vto
 body_class: body-text
 ---
-{{ include "templates/navbar.vto" }}
+{{ include `templates/navbar-${menu_style ?? "float"}.vto` }}
 
 <article class="text type-txt theme is-light">
   <header class="text-header">

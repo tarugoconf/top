@@ -9,7 +9,7 @@
 @import "styles/ui/button.css" layer(ui);
 @import "styles/ui/modal.css" layer(ui);
 @import "styles/ui/badge.css" layer(ui);
-@import "styles/ui/navbar.css" layer(ui);
+@import "styles/ui/navbar-float.css" layer(ui);
 @import "styles/ui/footer.css" layer(ui);
 @import "styles/ui/text.css" layer(ui);
 @import "styles/ui/markdown-alert.css" layer(ui);

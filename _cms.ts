@@ -17,6 +17,7 @@ import peopleBlock from "./src/_includes/blocks/people/fields.ts";
 import activitiesBlock from "./src/_includes/blocks/activities/fields.ts";
 import headerBlock from "./src/_includes/blocks/header/fields.ts";
 import multiTrackCalendarBlock from "./src/_includes/blocks/multitrack-calendar/fields.ts";
+import { de } from "npm:date-fns@4.1.0/locale";
 
 const blocks = {
   type: "choose-list",
@@ -113,6 +114,11 @@ cms.collection({
 
 cms.collection("Legal pages", "src:pages/*.md", [
   "title: text",
+  {
+    type: "text",
+    name: "basename",
+    description: "Basename of the page (used for the URL)",
+  },
   state,
   styles,
   "subtitle: text",
@@ -128,6 +134,14 @@ cms.document({
       type: "text",
       name: "title_suffix",
       description: "Default title or suffix for all pages",
+    },
+    {
+      type: "select",
+      name: "menu_style",
+      description: "Style of the menu bar",
+      options: [
+        "float",
+      ],
     },
     {
       type: "select",
