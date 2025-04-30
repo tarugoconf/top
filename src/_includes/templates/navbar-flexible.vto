@@ -1,0 +1,25 @@
+<nav class="navbar-flexible theme is-primary" id="menu">
+  <a href="/" class="navbar-logo">
+    <img src="{{ footer.logo }}" width="40" height="40">
+  </a>
+
+  <ul class="navbar-menu">
+    {{ for item of menu }}
+    <li>
+      <a href="{{ item.url}}" {{ item.highlight ? 'class="is-highlight"' : '' }}>
+        {{ item.text }}
+      </a>
+    </li>
+    {{ /for }}
+  </ul>
+
+  <button class="navbar-menu-toggle" id="menu-button">
+    {{ "list" |> icon }}
+    Menú
+  </button>
+
+  <a href="{{ cta.url }}" class="navbar-cta">
+    {{ cta.text }}
+    {{ "arrow-right" |> icon }}
+  </a>
+</nav>

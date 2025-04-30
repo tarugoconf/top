@@ -129,6 +129,7 @@ cms.document({
   name: "Settings",
   description: "General settings",
   store: "src:_data.yml",
+  url: "/",
   fields: [
     {
       type: "text",
@@ -141,6 +142,7 @@ cms.document({
       description: "Style of the menu bar",
       options: [
         "float",
+        "flexible",
       ],
     },
     {
