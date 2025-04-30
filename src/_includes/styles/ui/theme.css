@@ -76,6 +76,8 @@
     --color-lines: var(--color-light);
     --color-text: white;
     --color-links: var(--color-light);
+    --color-button-bg: var(--color-text);
+    --color-button-text: var(--color-dark);
   }
 
   &.is-dark {

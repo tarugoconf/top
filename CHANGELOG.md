@@ -8,6 +8,9 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 - Upgrade to Lume 3.
 
+### Fixed
+- Text styles and color issues
+
 ## [0.2.1] - 2024-11-03
 ### Added
 - Labels to calendar events.
