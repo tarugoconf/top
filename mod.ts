@@ -32,6 +32,8 @@ export default function () {
       "block_pages/_data.yml",
       "pages/_data.yml",
       "scripts/main.js",
+      "_components/vimeo/comp.vto",
+      "_components/vimeo/script.js",
       "styles/main.css",
     ];
 
@@ -53,6 +55,7 @@ export default function () {
       "text",
       "tickets",
       "video",
+      "vimeo",
     ];
 
     for (const block of blocks) {

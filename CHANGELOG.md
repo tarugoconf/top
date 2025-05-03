@@ -8,6 +8,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 - Allow to select the menu style type.
 - Allow to customize the basename of the legal pages.
+- New `vimeo` block to include a Vimeo video player.
 
 ### Changed
 - Upgrade to Lume 3.

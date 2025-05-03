@@ -18,6 +18,10 @@ export default function () {
       .add("files")
       .add("scripts")
       .add([".css"])
+      .add(
+        "npm:@vimeo/player@2.20.1/dist/player.es.js",
+        "scripts/deps/vimeo-player.js",
+      )
       .use(lightningcss())
       .use(basePath())
       .use(metas())

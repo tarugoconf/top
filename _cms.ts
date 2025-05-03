@@ -9,6 +9,7 @@ import logosBlock from "./src/_includes/blocks/logos/fields.ts";
 import pdfBlock from "./src/_includes/blocks/pdf/fields.ts";
 import textBlock from "./src/_includes/blocks/text/fields.ts";
 import videoBlock from "./src/_includes/blocks/video/fields.ts";
+import vimeoBlock from "./src/_includes/blocks/vimeo/fields.ts";
 import separatorBlock from "./src/_includes/blocks/separator/fields.ts";
 import calendarBlock from "./src/_includes/blocks/calendar/fields.ts";
 import speakersBlock from "./src/_includes/blocks/speakers/fields.ts";
@@ -17,7 +18,6 @@ import peopleBlock from "./src/_includes/blocks/people/fields.ts";
 import activitiesBlock from "./src/_includes/blocks/activities/fields.ts";
 import headerBlock from "./src/_includes/blocks/header/fields.ts";
 import multiTrackCalendarBlock from "./src/_includes/blocks/multitrack-calendar/fields.ts";
-import { de } from "npm:date-fns@4.1.0/locale";
 
 const blocks = {
   type: "choose-list",
@@ -41,6 +41,7 @@ const blocks = {
     pdfBlock,
     textBlock,
     videoBlock,
+    vimeoBlock,
   ],
 };
 const metas = {
