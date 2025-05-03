@@ -86,10 +86,13 @@
     --color-bg-code: color-mix(in srgb, var(--color-bg), white 10%);
     --color-text-code: var(--color-text);
 
+    --color-icons: var(--color-secondary);
     --color-titles: var(--color-primary);
     --color-lines: var(--color-primary);
     --color-text: var(--color-light);
     --color-links: var(--color-primary);
+    --color-button-bg: var(--color-primary);
+    --color-button-text: var(--color-dark);
   }
 }
 
