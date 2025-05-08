@@ -1,9 +1,12 @@
+import { theme } from "../cms.ts";
+
 export default {
   type: "object",
   name: "logos",
   fields: [
     "title: text",
     "id: text",
+    theme,
     "description: markdown",
     {
       type: "select",
