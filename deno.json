@@ -1,8 +1,8 @@
 {
   "imports": {
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@24fa52c6b4a3f7e83c434ce52baa75127a192e6a/",
+    "lume/": "https://deno.land/x/lume@v3.0.0/",
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.11.5/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.8/jsx-runtime.ts"
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
   },
   "lock": false,
   "tasks": {
@@ -23,5 +23,10 @@
   ],
   "unstable": [
     "temporal"
-  ]
+  ],
+  "lint": {
+    "plugins": [
+      "https://deno.land/x/lume@v3.0.0/lint.ts"
+    ]
+  }
 }
