@@ -6,7 +6,9 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [0.3.1] - Unreleased
 ### Added
-- Allow to modify the style of logos block.
+- Allow to modify the style of the logos block.
+- Allow to modify the theme of the menu.
+- Allow to modify the theme of the footer.
 
 ## [0.3.0] - 2025-05-08
 ### Added

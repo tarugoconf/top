@@ -28,6 +28,9 @@ html:has(.navbar-flexible) {
     img {
       height: auto;
     }
+    @media (width < 650px) {
+      display: none;
+    }
   }
 
   .navbar-menu {
@@ -45,9 +48,9 @@ html:has(.navbar-flexible) {
       border-radius: var(--border-radius-button);
       height: 50px;
       text-decoration: none;
-      color: white;
+      color: var(--color-links);
       &:hover {
-        background-color: color-mix(in srgb, var(--color-primary), black 10%);
+        background-color: color-mix(in srgb, var(--color-bg), black 10%);
       }
 
       &.is-highlight::after {
@@ -66,19 +69,23 @@ html:has(.navbar-flexible) {
   .navbar-menu-toggle {
     display: none;
     margin: 0;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
+    height: 50px;
+    line-height: var(--line-height-medium);
     align-items: center;
     border: none;
     outline: 0;
     font: inherit;
     color: white;
     background-color: var(--color-primary);
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-radius: var(--border-radius-button);
     cursor: pointer;
     column-gap: 0.5em;
     &:hover {
       background-color: color-mix(in srgb, var(--color-primary), black 10%);
+    }
+    svg {
+      fill: currentColor;
     }
   }
 
@@ -89,10 +96,15 @@ html:has(.navbar-flexible) {
     height: 50px;
     text-decoration: none;
     color: var(--color-dark);
+    line-height: var(--line-height-medium);
     display: flex;
     justify-content: end;
     align-items: center;
     column-gap: 0.5em;
+
+    svg {
+      fill: currentColor;
+    }
 
     &:hover {
       background-color: color-mix(in srgb, var(--color-secondary), black 5%);

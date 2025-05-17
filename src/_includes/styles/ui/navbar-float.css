@@ -17,6 +17,7 @@ html:has(.navbar-float) {
   letter-spacing: var(--font-2-spacing);
   line-height: var(--line-height-text);
   z-index: 3;
+  background-color: transparent !important; /* Override .theme.is-whatever */
 
   svg {
     width: 1em;
@@ -29,7 +30,7 @@ html:has(.navbar-float) {
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: var(--color-primary);
+    background-color: var(--color-bg);
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     overflow: hidden;
@@ -42,9 +43,9 @@ html:has(.navbar-float) {
       display: block;
       padding: 1em;
       text-decoration: none;
-      color: white;
+      color: var(--color-links);
       &:hover {
-        background-color: color-mix(in srgb, var(--color-primary), black 10%);
+        background-color: color-mix(in srgb, var(--color-bg), black 10%);
       }
 
       &.is-highlight::after {
@@ -71,14 +72,14 @@ html:has(.navbar-float) {
     border: none;
     outline: 0;
     font: inherit;
-    color: white;
-    background-color: var(--color-primary);
+    color: var(--color-links);
+    background-color: var(--color-bg);
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     cursor: pointer;
     column-gap: 0.5em;
     &:hover {
-      background-color: color-mix(in srgb, var(--color-primary), black 10%);
+      background-color: color-mix(in srgb, var(--color-bg), black 10%);
     }
   }
 
@@ -118,7 +119,7 @@ html:has(.navbar-float) {
       display: flex;
     }
     .navbar-menu-toggle {
-      background-color: color-mix(in srgb, var(--color-primary), black 10%);
+      background-color: color-mix(in srgb, var(--color-bg), black 10%);
     }
   }
   .navbar-float .navbar-menu-toggle {

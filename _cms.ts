@@ -148,6 +148,28 @@ cms.document({
     },
     {
       type: "select",
+      name: "menu_theme",
+      description: "Color scheme of the menu bar",
+      options: [
+        { label: "Primary color", value: "is-primary" },
+        { label: "Secondary color", value: "is-secondary" },
+        { label: "Light", value: "is-light" },
+        { label: "Dark", value: "is-dark" },
+      ],
+    },
+    {
+      type: "select",
+      name: "footer_theme",
+      description: "Color scheme of the footer",
+      options: [
+        { label: "Primary color", value: "is-primary" },
+        { label: "Secondary color", value: "is-secondary" },
+        { label: "Light", value: "is-light" },
+        { label: "Dark", value: "is-dark" },
+      ],
+    },
+    {
+      type: "select",
       name: "state",
       description: "Event state. This will filter the pages by state",
       options: [
