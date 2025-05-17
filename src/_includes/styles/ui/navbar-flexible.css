@@ -40,6 +40,7 @@ html:has(.navbar-flexible) {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: var(--color-bg);
 
     a {
       display: flex;
@@ -50,7 +51,7 @@ html:has(.navbar-flexible) {
       text-decoration: none;
       color: var(--color-links);
       &:hover {
-        background-color: color-mix(in srgb, var(--color-bg), black 10%);
+        background-color: color-mix(in srgb, var(--color-bg), var(--color-primary) 10%);
       }
 
       &.is-highlight::after {
