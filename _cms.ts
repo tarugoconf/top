@@ -180,6 +180,43 @@ cms.document({
     },
     {
       type: "object",
+      name: "metas",
+      description: "Default options for meta tags applied to all pages",
+      fields: [
+        {
+          type: "text",
+          name: "site",
+          label: "Name of the site",
+        },
+        "lang: text",
+        {
+          type: "text",
+          name: "twitter",
+          label: "Twitter username",
+          description: "If you want to use Twitter cards",
+        },
+        {
+          type: "text",
+          name: "fediverse",
+          label: "Fediverse handler",
+          description:
+            "It's used for <a target=_blank href='https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/'>author attribution</a>.",
+        },
+        {
+          type: "color",
+          name: "color",
+          label: "Color theme",
+        },
+        {
+          type: "file",
+          name: "image",
+          description:
+            "Default image for sharing on social media. It can be overridden in each page",
+        },
+      ],
+    },
+    {
+      type: "object",
       name: "cta",
       description: "Call to action (visible on all pages)",
       fields: [

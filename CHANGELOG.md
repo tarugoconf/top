@@ -9,6 +9,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 - Allow to modify the style of the logos block.
 - Allow to modify the theme of the menu.
 - Allow to modify the theme of the footer.
+- Allow to configure the default meta tags options in the CMS.
 
 ## [0.3.0] - 2025-05-08
 ### Added
