@@ -1,9 +1,13 @@
+import { theme } from "../cms.ts";
+
 export default {
   type: "object",
   name: "speakers",
   fields: [
     "title: text",
     "description: markdown",
+    "id: text",
+    theme,
     {
       type: "object-list",
       name: "speakers",
