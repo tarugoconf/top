@@ -1,3 +1,5 @@
+import { theme } from "../cms.ts";
+
 export default {
   type: "object",
   name: "tickets",
@@ -5,6 +7,7 @@ export default {
     "title: text",
     "description: markdown",
     "id: text",
+    theme,
     {
       type: "object-list",
       name: "features",

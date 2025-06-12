@@ -1,3 +1,8 @@
+.block-tickets {
+  --color-highlight: color-mix(in srgb, var(--color-bg) 95%, white);
+  --color-border: color-mix(in srgb, var(--color-bg) 90%, white);
+}
+
 .block-tickets-header {
   max-width: 800px;
   text-align: center;
@@ -17,7 +22,7 @@
     & th {
       width: 150px;
       padding: 1rem 1rem 2rem;
-      background: var(--color-light);
+      background: var(--color-highlight);
       text-align: center;
 
       &:empty {
@@ -55,11 +60,11 @@
 
   .ticket-feature > * {
     padding: 1rem;
-    border-bottom: solid 1px color-mix(in srgb, var(--color-light), black 10%);
+    border-bottom: solid 1px var(--color-border);
   }
 
   .ticket-feature-title {
-    background: white;
+    background: var(--color-highlight);
   }
 }
 
@@ -86,8 +91,8 @@
     align-items: center;
     justify-items: start;
     padding: 1rem 0;
-    border-bottom: solid 1px color-mix(in srgb, var(--color-light), black 10%);
-    background: var(--color-light);
+    border-bottom: solid 1px var(--color-border);
+    background: var(--color-shadow);
     grid-template-areas: "img title" "img cta";
 
     .ticket-disabled {
@@ -152,6 +157,8 @@
 .ticket-img {
   display: block;
   max-width: 100%;
+  width: 120px;
+  margin: auto;
 }
 .ticket-pricing {
   font-size: var(--font-1-size);
