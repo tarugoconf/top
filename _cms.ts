@@ -105,6 +105,30 @@ cms.collection({
       type: "text",
       description: "Public URL of the page",
     },
+    {
+      label: "Base colors",
+      name: "theme",
+      type: "select",
+      value: "is-light",
+      options: [
+        {
+          label: "Light",
+          value: "is-light",
+        },
+        {
+          label: "Primary",
+          value: "is-primary",
+        },
+        {
+          label: "Secondary",
+          value: "is-secondary",
+        },
+        {
+          label: "Dark",
+          value: "is-dark",
+        },
+      ],
+    },
     styles,
     metas,
     state,

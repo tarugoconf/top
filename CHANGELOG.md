@@ -4,13 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](https://semver.org/).
 
-## [0.3.1] - Unreleased
+## [0.4.0] - Unreleased
 ### Added
-- Allow to modify the style of the logos block.
-- Allow to modify the theme of the speakers block.
+- New global theme per page.
 - Allow to modify the theme of the menu.
 - Allow to modify the theme of the footer.
-- Allow to modify the theme of the tickets.
+- Allow to modify the style of the logos block.
+- Allow to modify the theme of the speakers block.
+- Allow to modify the theme of the tickets block.
+- Allow to modify the theme of the calendar block.
 - Allow to configure the default meta tags options in the CMS.
 
 ## [0.3.0] - 2025-05-08

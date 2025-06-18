@@ -1,7 +1,7 @@
 .markdown-alert {
   --color: currentColor;
   padding: 1rem;
-  background-color: white;
+  background-color: var(--color-highlight);
   text-align: left;
   border-radius: 1rem;
   font-size: var(--font-1-size);

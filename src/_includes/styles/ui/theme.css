@@ -39,11 +39,12 @@
 
     --color-icons: var(--color-primary);
     --color-titles: var(--color-primary);
-    --color-lines: var(--color-primary);
+    --color-lines: color-mix(in srgb, var(--color-primary) 20%, transparent);
     --color-text: var(--color-dark);
     --color-links: var(--color-dark);
     --color-button-bg: var(--color-secondary);
     --color-button-text: var(--color-dark);
+    --color-highlight: color-mix(in srgb, var(--color-bg) 95%, white);
   }
 
   &.is-secondary {
@@ -59,11 +60,12 @@
 
     --color-icons: var(--color-primary);
     --color-titles: var(--color-primary);
-    --color-lines: var(--color-primary);
+    --color-lines: color-mix(in srgb, var(--color-secondary) 90%, white);
     --color-text: var(--color-dark);
     --color-links: var(--color-dark);
     --color-button-bg: var(--color-primary);
     --color-button-text: var(--color-light);
+    --color-highlight: color-mix(in srgb, var(--color-bg) 95%, white);
   }
 
   &.is-primary {
@@ -73,11 +75,12 @@
     --color-text-code: var(--color-text);
 
     --color-titles: var(--color-dark);
-    --color-lines: var(--color-light);
+    --color-lines: color-mix(in srgb, var(--color-primary) 90%, white);
     --color-text: white;
     --color-links: var(--color-light);
     --color-button-bg: var(--color-text);
     --color-button-text: var(--color-dark);
+    --color-highlight: color-mix(in srgb, var(--color-bg) 95%, white);
   }
 
   &.is-dark {
@@ -88,11 +91,12 @@
 
     --color-icons: var(--color-secondary);
     --color-titles: var(--color-primary);
-    --color-lines: var(--color-primary);
+    --color-lines: color-mix(in srgb, var(--color-dark) 90%, white);
     --color-text: var(--color-light);
     --color-links: var(--color-primary);
     --color-button-bg: var(--color-primary);
     --color-button-text: var(--color-dark);
+    --color-highlight: color-mix(in srgb, var(--color-bg) 95%, white);
   }
 }
 

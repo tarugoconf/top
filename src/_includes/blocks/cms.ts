@@ -2,11 +2,19 @@ export const theme = {
   label: "Style",
   name: "theme",
   type: "select",
-  value: "is-light width-box box-fill",
+  value: "width-full",
   options: [
     {
-      label: "Default",
+      label: "Inherit",
+      value: "width-full",
+    },
+    {
+      label: "Light box",
       value: "is-light width-box box-fill",
+    },
+    {
+      label: "Light full width",
+      value: "is-light width-full box-fill",
     },
     {
       label: "Primary box",

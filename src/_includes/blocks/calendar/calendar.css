@@ -14,7 +14,7 @@
   row-gap: 0.5rem;
 }
 .event {
-  background-color: white;
+  background-color: var(--color-highlight);
   overflow: hidden;
   border-radius: 0.5rem;
 
@@ -27,7 +27,11 @@
   padding: 1rem;
 
   &:hover {
-    background-color: color-mix(in srgb, var(--color-light), white 50%);
+    background-color: color-mix(
+      in srgb,
+      var(--color-highlight),
+      var(--color-text) 10%
+    );
   }
 }
 .event-header {
@@ -51,7 +55,11 @@
     cursor: pointer;
   }
   &:is(button:hover) {
-    background-color: color-mix(in srgb, var(--color-light), white 50%);
+    background-color: color-mix(
+      in srgb,
+      var(--color-highlight),
+      var(--color-text) 10%
+    );
   }
 }
 .event-time {

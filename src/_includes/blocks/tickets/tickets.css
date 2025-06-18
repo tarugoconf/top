@@ -1,8 +1,3 @@
-.block-tickets {
-  --color-highlight: color-mix(in srgb, var(--color-bg) 95%, white);
-  --color-border: color-mix(in srgb, var(--color-bg) 90%, white);
-}
-
 .block-tickets-header {
   max-width: 800px;
   text-align: center;
