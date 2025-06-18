@@ -16,6 +16,9 @@ project adheres to [Semantic Versioning](https://semver.org/).
 - Allow to modify the theme of the calendar block.
 - Allow to configure the default meta tags options in the CMS.
 
+### Fixed
+- Calendar header layout.
+
 ## [0.3.0] - 2025-05-08
 ### Added
 - Allow to select the menu style type.

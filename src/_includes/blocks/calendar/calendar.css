@@ -9,6 +9,11 @@
     column-gap: 4rem;
   }
 }
+.block-calendar-header {
+  text-align: center;
+  max-width: 30rem;
+  justify-self: center;
+}
 .event-list {
   display: grid;
   row-gap: 0.5rem;
