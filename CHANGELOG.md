@@ -7,6 +7,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.4.0] - Unreleased
 ### Added
 - New global theme per page.
+- New variable `--color-highlight` to configure shadow backgrounds.
 - Allow to modify the theme of the menu.
 - Allow to modify the theme of the footer.
 - Allow to modify the style of the logos block.
