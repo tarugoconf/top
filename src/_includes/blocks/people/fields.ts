@@ -1,3 +1,5 @@
+import { theme } from "../cms.ts";
+
 export default {
   type: "object",
   name: "people",
@@ -5,6 +7,7 @@ export default {
     "title: text",
     "id: text",
     "description: markdown",
+    theme,
     {
       type: "object-list",
       name: "items",

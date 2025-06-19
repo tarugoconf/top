@@ -15,6 +15,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 - Allow to modify the theme of the tickets block.
 - Allow to modify the theme of the calendar block.
 - Allow to modify the theme of the activities block.
+- Allow to modify the theme of the people block.
 - Allow to configure the default meta tags options in the CMS.
 
 ### Fixed
