@@ -10,7 +10,7 @@
   }
 
   > li {
-    background: white;
+    background: var(--color-highlight);
     border-radius: 0.5rem;
     overflow: hidden;
     container-type: inline-size;
