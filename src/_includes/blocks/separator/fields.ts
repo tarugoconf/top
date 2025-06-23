@@ -4,6 +4,7 @@ export default {
   fields: [
     {
       type: "select",
+      label: "Style",
       name: "width",
       options: [
         {
@@ -13,6 +14,10 @@ export default {
         {
           label: "Full width",
           value: "is-full",
+        },
+        {
+          label: "Invisible",
+          value: "is-invisible",
         },
       ],
     },

@@ -6,4 +6,9 @@
   &.is-full {
     grid-column: 1 / -1;
   }
+
+  &.is-invisible {
+    grid-column: start / end;
+    visibility: hidden;
+  }
 }
