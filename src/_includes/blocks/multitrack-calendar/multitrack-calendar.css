@@ -3,9 +3,14 @@
   border-radius: 0.5rem;
   background-color: var(--color-bg-hover);
   margin-top: 0.5rem;
+  margin: 0;
 }
 .event-list:has(.event-tracks) {
   grid-column: 1 / -1;
+  gap: .5rem;
+  h3 {
+    margin-top: 2em;
+  }
 }
 .event-tracks {
   display: grid;
@@ -14,8 +19,6 @@
   gap: 0.5rem;
   overflow-x: auto;
   padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   scrollbar-width: thin;
   scrollbar-color: var(--color-icons) var(--color-bg);
 
@@ -37,6 +40,10 @@
       grid-template-areas: "time" "title" "subtitle";
     }
   }
+}
+.block-calendar.width-full:has(.event-tracks) .event-list > * {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .event-modal-header {
   margin-bottom: 1em;

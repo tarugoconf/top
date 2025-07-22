@@ -1,8 +1,8 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.0/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.11.5/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.9/jsx-runtime.ts"
+    "lume/": "https://deno.land/x/lume@v3.0.5/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.12.5/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.11/jsx-runtime.ts"
   },
   "lock": false,
   "tasks": {
@@ -22,11 +22,12 @@
     "CHANGELOG.md"
   ],
   "unstable": [
-    "temporal"
+    "temporal",
+    "fmt-component"
   ],
   "lint": {
     "plugins": [
-      "https://deno.land/x/lume@v3.0.0/lint.ts"
+      "https://deno.land/x/lume@v3.0.5/lint.ts"
     ]
   }
 }
