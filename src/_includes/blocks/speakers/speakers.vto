@@ -8,21 +8,21 @@
   </header>
 
   <ul class="block-speakers-list">
-  {{ for speaker of block.speakers }}
-  <li>
-    <button class="speaker" data-open="dialog-{{ speaker.id }}">
-      <img class="speaker-image" src="{{ speaker.image }}">
-      <h4 class="type-short-bold">{{ speaker.name }}</h4>
+    {{ for speaker of block.speakers }}
+      <li>
+        <button class="speaker" data-open="dialog-{{ speaker.id }}">
+          <img class="speaker-image" src="{{ speaker.image }}">
+          <h4 class="type-short-bold">{{ speaker.name }}</h4>
 
-      <p class="type-short">
-        {{ if speaker.company }}
-          {{ speaker.company }}<br>
-        {{ /if }}
-        <em class="speaker-position">{{ speaker.role }}</em>
-      </p>
-    </button>
-  </li>
-  {{ /for }}
+          <p class="type-short">
+            {{ if speaker.company }}
+              {{ speaker.company }}<br>
+            {{ /if }}
+            <em class="speaker-position">{{ speaker.role }}</em>
+          </p>
+        </button>
+      </li>
+    {{ /for }}
   </ul>
 </section>
 
@@ -31,7 +31,7 @@
     <button data-close class="modal-close" aria-label="Cerrar">
       {{ "x" |> icon("regular") }}
     </button>
-    
+
     <div class="modal-content">
       <header class="speaker-modal-header">
         <div class="speaker-modal-photo">
@@ -39,14 +39,14 @@
         </div>
 
         <div class="speaker-modal-title">
-            <h4 class="type-subtitle">{{ speaker.name }}</h4>
+          <h4 class="type-subtitle">{{ speaker.name }}</h4>
 
-            <p class="type-short">
-              {{ if speaker.company }}
+          <p class="type-short">
+            {{ if speaker.company }}
               <strong class="type-txt-bold">{{ speaker.company }}</strong><br>
-              {{ /if }}
-              {{ speaker.role }}
-            </p>
+            {{ /if }}
+            {{ speaker.role }}
+          </p>
         </div>
 
         <address class="speaker-modal-links">
@@ -54,12 +54,12 @@
             <a href="{{ link.url }}" target="_blank">
               {{ link.icon |> icon }}
             </a>
-            {{ /for }}
+          {{ /for }}
         </address>
       </header>
 
       <div class="speaker-modal-bio type-txt">
-          {{ speaker.bio |> md }}
+        {{ speaker.bio |> md }}
       </div>
     </div>
   </dialog>

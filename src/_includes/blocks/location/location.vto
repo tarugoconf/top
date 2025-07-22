@@ -5,7 +5,7 @@
 
       {{ if block.caption }}
         <figcaption class="type-caption">
-        {{ block.caption |> md }}
+          {{ block.caption |> md }}
         </figcaption>
       {{ /if }}
     </figure>
@@ -14,13 +14,13 @@
       <h2 class="type-subtitle">{{ block.title }}</h2>
       <ul class="type-short">
         {{ for direction of block.directions }}
-        <li>
-          {{ direction.icon |> icon }}
-          <div>
-            <h3 class="type-short-bold">{{ direction.title }}</h3>
-            {{ direction.description |> md }}
-          </div>
-        </li>
+          <li>
+            {{ direction.icon |> icon }}
+            <div>
+              <h3 class="type-short-bold">{{ direction.title }}</h3>
+              {{ direction.description |> md }}
+            </div>
+          </li>
         {{ /for }}
       </ul>
     </div>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ lang || 'es' }}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title ? `${title} - ${title_suffix}` : title_suffix }}</title>
-  <link rel="stylesheet" href="/styles/main.css">
-  <link rel="stylesheet" href="/styles/theme.css">
-  {{ extra_head }}
-  <script src="/scripts/main.js" type="module"></script>
-  <script src="/script.js" type="module"></script>
-</head>
-<body class="ly-wrapper theme {{ theme }}">
-  {{ content }}
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title ? `${title} - ${title_suffix}` : title_suffix }}</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/theme.css">
+    {{ extra_head }}
+    <script src="/scripts/main.js" type="module"></script>
+    <script src="/script.js" type="module"></script>
+  </head>
+  <body class="ly-wrapper theme {{ theme }}">
+    {{ content }}
+  </body>
 </html>

@@ -1,9 +1,12 @@
-<figure id="{{ block.id }}" class="block-vimeo theme is-light box-fill no-padding width-full">
+<figure
+  id="{{ block.id }}"
+  class="block-vimeo theme is-light box-fill no-padding width-full"
+>
   {{ comp.vimeo(block) }}
 
   {{ if block.caption }}
-  <figcaption>
-    {{ block.caption |> md }}
-  </figcaption>
+    <figcaption>
+      {{ block.caption |> md }}
+    </figcaption>
   {{ /if }}
 </figure>

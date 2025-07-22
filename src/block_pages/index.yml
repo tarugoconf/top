@@ -1,15 +1,15 @@
 menu:
   - text: Location
-    url: '#location'
+    url: "#location"
     highlight: false
   - text: Calendar
-    url: '#calendar'
+    url: "#calendar"
     highlight: false
   - text: Partners
-    url: '#partners'
+    url: "#partners"
     highlight: true
   - text: Contact
-    url: '#contact'
+    url: "#contact"
     highlight: false
 blocks:
   - type: hero
@@ -36,16 +36,16 @@ blocks:
           - title: Sala 3
             id: sala-3
         events:
-          - time: '12:00'
+          - time: "12:00"
             title: Evento 1
             subtitle: pois eso
             track: sala-1
             speakers: []
-          - time: '12:00'
+          - time: "12:00"
             title: outro evento
             track: sala-2
             speakers: []
-          - time: '13:00'
+          - time: "13:00"
             title: cafe
             speakers: []
       - title: Día 2
@@ -55,7 +55,7 @@ blocks:
           - title: Sala 3
             id: sala-3
         events:
-          - time: '12:00'
+          - time: "12:00"
             title: Evento novo
             track: sala-2
             speakers: []
@@ -82,10 +82,10 @@ blocks:
       loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     directions:
       - title: Tordoia
-        description: '15683 Tordoia, A Coruña'
+        description: "15683 Tordoia, A Coruña"
         icon: map-pin
       - title: Metro
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         icon: train-simple
       - title: Train
         description: >-
@@ -94,10 +94,10 @@ blocks:
           1</span>
         icon: train
       - title: Taxi
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         icon: taxi
       - title: Car
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         icon: car
   - type: calendar
     title: Calendar
@@ -106,13 +106,13 @@ blocks:
     days:
       - title: Day 1
         events:
-          - time: '15:00h'
+          - time: "15:00h"
             title: First event
             description: >-
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at
               odio venenatis, laoreet libero ut, lobortis ipsum.
             speakers: []
-          - time: '16:00h'
+          - time: "16:00h"
             title: Second event
             description: >-
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at
@@ -120,13 +120,13 @@ blocks:
             speakers: []
       - title: Day 2
         events:
-          - time: '15:00h'
+          - time: "15:00h"
             title: First event
             description: >-
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at
               odio venenatis, laoreet libero ut, lobortis ipsum.
             speakers: []
-          - time: '16:00h'
+          - time: "16:00h"
             title: Second event
             description: >-
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at
@@ -175,13 +175,13 @@ blocks:
     items:
       - alt: Logo
         img: /files/logos/logo.png
-        url: 'https://github.com/tarugoconf/TOP'
+        url: "https://github.com/tarugoconf/TOP"
       - alt: Logo
         img: /files/logos/logo.png
-        url: 'https://github.com/tarugoconf/TOP'
+        url: "https://github.com/tarugoconf/TOP"
       - alt: Logo
         img: /files/logos/logo.png
-        url: 'https://github.com/tarugoconf/TOP'
+        url: "https://github.com/tarugoconf/TOP"
   - type: separator
     width: is-default
   - type: logos
@@ -189,13 +189,13 @@ blocks:
     items:
       - alt: Logo
         img: /files/logos/logo.png
-        url: 'https://github.com/tarugoconf/TOP'
+        url: "https://github.com/tarugoconf/TOP"
       - alt: Logo
         img: /files/logos/logo.png
-        url: 'https://github.com/tarugoconf/TOP'
+        url: "https://github.com/tarugoconf/TOP"
       - alt: Logo
         img: /files/logos/logo.png
-        url: 'https://github.com/tarugoconf/TOP'
+        url: "https://github.com/tarugoconf/TOP"
   - type: separator
     width: is-default
   - type: people
@@ -250,10 +250,10 @@ blocks:
       - title: Name
         info: Event manager
         links:
-          - url: 'mailto:email@example.com'
+          - url: "mailto:email@example.com"
             icon: envelope
             text: email@example.com
 metas:
-  image: ''
+  image: ""
 url: /
 only_state: post-event

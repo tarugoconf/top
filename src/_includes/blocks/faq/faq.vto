@@ -6,12 +6,12 @@
 
     <div class="block-faq-questions">
       {{ for item of block.questions }}
-      <details class="accordion">
-        <summary class="type-txt-bold">{{ item.question }}</summary>
-        <div class="type-txt">
-          {{ item.answer |> md }}
-        </div>
-      </details>
+        <details class="accordion">
+          <summary class="type-txt-bold">{{ item.question }}</summary>
+          <div class="type-txt">
+            {{ item.answer |> md }}
+          </div>
+        </details>
       {{ /for }}
     </div>
   </div>

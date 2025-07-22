@@ -3,7 +3,6 @@
     {{ if block.title }}
       <h2 class="type-title">{{ block.title }}</h2>
     {{ /if }}
-    
 
     <div>
       {{ block.text |> md }}
@@ -14,9 +13,9 @@
     <iframe src="{{ block.src }}"></iframe>
 
     {{ if block.caption }}
-    <figcaption class="type-caption">
-      {{ block.caption |> md }}
-    </figcaption>
+      <figcaption class="type-caption">
+        {{ block.caption |> md }}
+      </figcaption>
     {{ /if }}
   </figure>
 </section>

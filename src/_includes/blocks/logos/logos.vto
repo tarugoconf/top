@@ -1,23 +1,26 @@
-<section id="{{ block.id }}" class="block-logos theme {{ block.theme ?? "is-light width-box box-fill" }}">
+<section
+  id="{{ block.id }}"
+  class='block-logos theme {{ block.theme ?? "is-light width-box box-fill" }}'
+>
   {{ if block.title || block.description }}
-  <header class="block-logos-header">
-    <h2 class="type-title">{{ block.title }}</h2>
+    <header class="block-logos-header">
+      <h2 class="type-title">{{ block.title }}</h2>
 
-    <div class="block-logos-description type-txt">
-      {{ block.description |> md }}
-    </div>
-  </header>
+      <div class="block-logos-description type-txt">
+        {{ block.description |> md }}
+      </div>
+    </header>
   {{ /if }}
 
   <ul class="block-logos-list is-{{ block.size }}">
     {{ for item of block.items }}
-    <li>
+      <li>
         <a href="{{ item.url }}" target="_blank">
-            <img src="{{ item.img }}" alt="{{ item.alt }}">
+          <img src="{{ item.img }}" alt="{{ item.alt }}">
 
-            {{ item.description |> md }}
+          {{ item.description |> md }}
         </a>
-    </li>
+      </li>
     {{ /for }}
   </ul>
 </section>

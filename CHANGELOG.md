@@ -21,6 +21,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 - Calendar header layout.
+- Multitrack alignment.
 
 ## [0.3.0] - 2025-05-08
 ### Added

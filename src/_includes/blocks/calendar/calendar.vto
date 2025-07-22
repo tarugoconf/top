@@ -9,58 +9,63 @@
     </header>
 
     {{ for day of block.days }}
-    <div class="event-list">
-      <h3 class="type-subtitle">{{ day.title }}</h3>
+      <div class="event-list">
+        <h3 class="type-subtitle">{{ day.title }}</h3>
 
-      {{ for event of day.events }}
-      <details class="event" id="{{ event.id }}">
-        <summary>
-          <div class="event-header">
-            <time class="event-time type-caption">{{ event.time }}</time>
-            <strong class="event-title type-short-m-bold">
-              {{ if event.label }}
-              <span class="badge">{{ event.label }}</span>
-              {{ /if }}
+        {{ for event of day.events }}
+          <details class="event" id="{{ event.id }}">
+            <summary>
+              <div class="event-header">
+                <time class="event-time type-caption">{{ event.time }}</time>
+                <strong class="event-title type-short-m-bold">
+                  {{ if event.label }}
+                    <span class="badge">{{ event.label }}</span>
+                  {{ /if }}
 
-              {{ event.title }}
-            </strong>
+                  {{ event.title }}
+                </strong>
 
-            {{ if event.subtitle }}
-              <p class="event-subtitle type-caption">
-                {{ event.subtitle }}
-              </p>
-            {{ /if }}
-          </div>
-        </summary>
-
-        <div class="event-description type-txt">
-          {{ event.description |> md }}
-        </div>
-
-        {{ if event.speakers }}
-          {{ set speakers = blocks
-              .filter((block) => block.type === "speakers")
-              .shift()?.speakers
-              .filter((speaker) => event.speakers.includes(speaker.id))
-          }}
-
-          <ul class="event-speakers">
-          {{ for speaker of speakers }}
-          <li>
-            <button data-open="dialog-{{ speaker.id }}">
-              <img src="{{ speaker.image }}" alt="Retrato">
-              <div>
-                <strong class="type-txt-bold">{{ speaker.name }}</strong>
-                <p class="type-caption">{{ speaker.company }}<br> <em>{{ speaker.role }}</em></p>
+                {{ if event.subtitle }}
+                  <p class="event-subtitle type-caption">
+                    {{ event.subtitle }}
+                  </p>
+                {{ /if }}
               </div>
-            </button>
-          </li>
-          {{ /for }}
-          </ul>
-        {{ /if }}
-      </details>
-      {{ /for }}
-    </div>
+            </summary>
+
+            <div class="event-description type-txt">
+              {{ event.description |> md }}
+            </div>
+
+            {{ if event.speakers }}
+              {{
+                set speakers = blocks
+                  .filter((block) => block.type === "speakers")
+                  .shift()?.speakers
+                  .filter((speaker) => event.speakers.includes(speaker.id))
+              }}
+
+              <ul class="event-speakers">
+                {{ for speaker of speakers }}
+                  <li>
+                    <button data-open="dialog-{{ speaker.id }}">
+                      <img src="{{ speaker.image }}" alt="Retrato">
+                      <div>
+                        <strong class="type-txt-bold">{{
+                          speaker.name
+                        }}</strong>
+                        <p class="type-caption">
+                          {{ speaker.company }}<br> <em>{{ speaker.role }}</em>
+                        </p>
+                      </div>
+                    </button>
+                  </li>
+                {{ /for }}
+              </ul>
+            {{ /if }}
+          </details>
+        {{ /for }}
+      </div>
     {{ /for }}
   </div>
 </section>

@@ -6,11 +6,11 @@
 
     <ul>
       {{ for item of footer.menu }}
-      <li{{ item.separator ? ' class="is-separated"' : "" }}>
+        <li {{ item.separator ? ' class="is-separated"' : "" }}>
           <a href="{{ item.href }}">
-              {{ item.text }}
+            {{ item.text }}
           </a>
-      </li>
+        </li>
       {{ /for }}
     </ul>
   </div>
