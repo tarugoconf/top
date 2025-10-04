@@ -35,6 +35,7 @@
     grid-template-columns: 1fr;
     grid-template-areas: "time" "title";
     align-content: start;
+    color: inherit;
 
     &:has(.event-subtitle) {
       grid-template-areas: "time" "title" "subtitle";
