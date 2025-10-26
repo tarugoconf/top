@@ -253,6 +253,11 @@ cms.document({
       name: "footer",
       description: "Footer settings (copyright, menu)",
       fields: [
+        {
+          name: "logo",
+          type: "file",
+          description: "Logo to show in the footer. It's used also in the menu bar",
+        },
         "copyright: markdown",
         {
           type: "object-list",
