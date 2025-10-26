@@ -154,7 +154,7 @@ cms.document({
   name: "Settings",
   description: "General settings",
   store: "src:_data.yml",
-  url: "/",
+  previewUrl: () => "/",
   fields: [
     {
       type: "text",

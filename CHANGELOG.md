@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.4.2] - Unreleased
+### Changed
+- Updated to Lume 3.1
+
+### Fixed
+- Humans.txt format
+
 ## [0.4.1] - 2025-10-04
 ### Fixed
 - Multitrack calendar in dark mode.
@@ -84,6 +91,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.1.0] - 2024-07-17
 First version
 
+[0.4.2]: https://github.com/tarugoconf/TOP/compare/v0.4.1...HEAD
 [0.4.1]: https://github.com/tarugoconf/TOP/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/tarugoconf/TOP/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/tarugoconf/TOP/compare/v0.2.1...v0.3.0
