@@ -40,9 +40,9 @@
             {{ if event.speakers }}
               {{
                 set speakers = blocks
-                  .filter((block) => block.type === "speakers")
-                  .shift()?.speakers
-                  .filter((speaker) => event.speakers.includes(speaker.id))
+                .filter((block) => block.type === "speakers")
+                .shift()?.speakers
+                .filter((speaker) => event.speakers.includes(speaker.id))
               }}
 
               <ul class="event-speakers">

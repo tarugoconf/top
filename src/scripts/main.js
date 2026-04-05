@@ -14,6 +14,16 @@ document.getElementById("menu").addEventListener("click", (ev) => {
   }, 100);
 });
 
+if (document.querySelector(".navbar-flexible.is-transparent")) {
+  document.addEventListener("scroll", () => {
+    if (scrollY > 50) {
+      document.body.classList.add("is-sticky");
+    } else {
+      document.body.classList.remove("is-sticky");
+    }
+  }, { passive: true });
+}
+
 document.querySelectorAll("button[data-open]").forEach((el) => {
   el.addEventListener("click", () => {
     history.replaceState(null, null, `#${el.dataset.open}`);
@@ -84,7 +94,7 @@ document.querySelectorAll(".carousel").forEach((el) => {
     const current = imgs[index];
     current.classList.add("is-current");
     current.addEventListener("animationend", () => {
-      previous.classList.remove("is-current");
-    }, { once: true })
-  }, 8000)
+      previous.classList.remove("is-previous");
+    }, { once: true });
+  }, 8000);
 });

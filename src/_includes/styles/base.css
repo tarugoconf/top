@@ -19,9 +19,9 @@ body {
   min-height: 100vh;
   grid-template-columns:
     minmax(2rem, 1fr) [start] minmax(0, 617px) [center] minmax(
-    0,
-    617px
-  ) [end] minmax(2rem, 1fr);
+      0,
+      617px
+    ) [end] minmax(2rem, 1fr);
 
   > * {
     grid-column: 1 / -1;

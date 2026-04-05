@@ -121,6 +121,23 @@ html:has(.navbar-flexible) {
   }
 }
 
+.navbar-flexible.is-transparent {
+  position: fixed;
+}
+body:not(.is-sticky) .navbar-flexible.is-transparent {
+  background: none;
+}
+body:not(.has-navbar-open) .navbar-flexible.is-transparent .navbar-menu {
+  background: none;
+}
+@media (width >= 1100px) {
+  .navbar-flexible.is-transparent {
+    .navbar-menu {
+      background: none;
+    }
+  }
+}
+
 @media (width < 1100px) {
   .navbar-flexible .navbar-menu {
     display: none;

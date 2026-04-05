@@ -170,6 +170,7 @@ cms.document({
       options: [
         "float",
         "flexible",
+        "transparent",
       ],
     },
     {
@@ -258,7 +259,8 @@ cms.document({
         {
           name: "logo",
           type: "file",
-          description: "Logo to show in the footer. It's used also in the menu bar",
+          description:
+            "Logo to show in the footer. It's used also in the menu bar",
         },
         "copyright: markdown",
         {

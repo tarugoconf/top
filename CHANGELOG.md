@@ -7,9 +7,10 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.4.2] - Unreleased
 ### Added
 - New block `carouselText`.
+- New menu `transparent`.
 
 ### Changed
-- Updated to Lume 3.1
+- Updated to Lume 3.2
 
 ### Fixed
 - Humans.txt format

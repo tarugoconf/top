@@ -11,8 +11,8 @@ export default {
       name: "carousel",
       type: "file-list",
       fields: [
-        "src: file"
-      ]
+        "src: file",
+      ],
     },
     "text: markdown",
   ],
