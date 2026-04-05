@@ -70,3 +70,21 @@ function restore(id) {
     history.replaceState(null, null, document.location.pathname);
   }
 }
+
+// Carousel
+document.querySelectorAll(".carousel").forEach((el) => {
+  const imgs = Array.from(el.querySelectorAll("img"));
+  imgs[0].classList.add("is-current");
+  setInterval(() => {
+    let index = imgs.findIndex((img) => img.classList.contains("is-current"));
+    const previous = imgs[index];
+    previous.classList.add("is-previous");
+    previous.classList.remove("is-current");
+    index = (index === -1 || index === imgs.length - 1) ? 0 : index + 1;
+    const current = imgs[index];
+    current.classList.add("is-current");
+    current.addEventListener("animationend", () => {
+      previous.classList.remove("is-current");
+    }, { once: true })
+  }, 8000)
+});

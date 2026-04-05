@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [0.4.2] - Unreleased
+### Added
+- New block `carouselText`.
+
 ### Changed
 - Updated to Lume 3.1
 

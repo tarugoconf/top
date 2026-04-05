@@ -25,6 +25,7 @@
 @import "blocks/header/header.css" layer(ui);
 @import "blocks/hero/hero.css" layer(ui);
 @import "blocks/imagetext/imagetext.css" layer(ui);
+@import "blocks/carouseltext/carouseltext.css" layer(ui);
 @import "blocks/location/location.css" layer(ui);
 @import "blocks/logos/logos.css" layer(ui);
 @import "blocks/separator/separator.css" layer(ui);

@@ -1,0 +1,15 @@
+<section id="{{ block.id }}" class="block-carouseltext theme {{ block.theme }}">
+  <figure class="carousel">
+    {{ for { src }  of block.carousel }}  
+      <img src="{{ src }}">
+    {{ /for }}
+  </figure>
+
+  <div class="type-txt">
+    {{ if block.title }}
+      <h2 class="type-title">{{ block.title }}</h2>
+    {{ /if }}
+
+    {{ block.text |> md }}
+  </div>
+</section>

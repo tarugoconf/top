@@ -4,6 +4,7 @@ import contactBlock from "./src/_includes/blocks/contact/fields.ts";
 import faqBlock from "./src/_includes/blocks/faq/fields.ts";
 import heroBlock from "./src/_includes/blocks/hero/fields.ts";
 import imageTextBlock from "./src/_includes/blocks/imagetext/fields.ts";
+import carouselTextBlock from "./src/_includes/blocks/carouseltext/fields.ts";
 import locationBlock from "./src/_includes/blocks/location/fields.ts";
 import logosBlock from "./src/_includes/blocks/logos/fields.ts";
 import pdfBlock from "./src/_includes/blocks/pdf/fields.ts";
@@ -32,6 +33,7 @@ const blocks = {
     faqBlock,
     heroBlock,
     imageTextBlock,
+    carouselTextBlock,
     locationBlock,
     logosBlock,
     peopleBlock,
