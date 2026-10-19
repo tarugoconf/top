@@ -1,5 +1,10 @@
+/* Joined with a preceding calendar of the same box style: no gap between them */
+.block-calendar.box-fill + .block-multitrack-calendar.box-fill {
+  margin-top: calc(var(--row-gap) * -1);
+}
 .event-track-title {
-  padding: 1rem;
+  padding: 0.75rem;
+  text-align: center;
   border-radius: 0.5rem;
   background-color: var(--color-bg-hover);
   margin-top: 0.5rem;
@@ -12,7 +17,61 @@
     margin-top: 2em;
   }
 }
+/* Horizontal scroll affordance: fades + arrows shown only when there is more */
+.event-tracks-scroller {
+  position: relative;
+  min-width: 0; /* grid item: allow shrinking so .event-tracks scrolls */
+}
+.event-tracks-arrow {
+  --arrow-size: 3rem;
+  position: absolute;
+  top: 0;
+  bottom: 1rem; /* leave the scrollbar visible */
+  width: var(--arrow-size);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--color-text);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+  }
+  &.is-left {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg) 30%, transparent);
+
+    &::after {
+      transform: translate(-25%, -50%) rotate(-135deg);
+    }
+  }
+  &.is-right {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg) 30%, transparent);
+
+    &::after {
+      transform: translate(-75%, -50%) rotate(45deg);
+    }
+  }
+}
+.event-tracks-scroller.can-scroll-left .event-tracks-arrow.is-left,
+.event-tracks-scroller.can-scroll-right .event-tracks-arrow.is-right {
+  opacity: 1;
+  pointer-events: auto;
+}
 .event-tracks {
+  --track-min: 10em; /* equal columns: 1fr each, never narrower than this */
   display: grid;
   grid-template-columns: var(--tracks);
   grid-auto-flow: dense;
@@ -28,18 +87,35 @@
 
   .event {
     margin: 0;
+    border: solid var(--border-weight, 1px) var(--color-lines);
+    border-radius: 0.5rem;
+    background-color: var(--color-highlight);
   }
 
   .event-header {
-    padding: 1em;
+    padding: 0.75rem;
     grid-template-columns: 1fr;
     grid-template-areas: "time" "title";
     align-content: start;
+    row-gap: 0.25rem;
     color: inherit;
 
     &:has(.event-subtitle) {
       grid-template-areas: "time" "title" "subtitle";
     }
+  }
+
+  /* Plain, compact text (the site may decorate .event-title elsewhere) */
+  .event-header .event-title {
+    font-size: var(--font-1-size);
+    line-height: 1.3;
+    font-weight: bold;
+  }
+  .event-header .event-subtitle {
+    font-size: var(--font-0-size);
+  }
+  .event-header .badge {
+    vertical-align: middle;
   }
 }
 .block-calendar.width-full:has(.event-tracks) .event-list > * {

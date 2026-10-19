@@ -1,3 +1,5 @@
+import { theme } from "../cms.ts";
+
 export default {
   type: "object",
   name: "multitrack-calendar",
@@ -5,7 +7,7 @@ export default {
     "title: text",
     "description: markdown",
     "id: text",
-    "fullwidth: checkbox",
+    theme,
     {
       type: "object-list",
       name: "days",

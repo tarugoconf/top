@@ -1,6 +1,6 @@
 <section
   id="{{ block.id }}"
-  class="block-calendar theme {{ block.fullwidth ? 'width-full' : 'width-box' }}"
+  class="block-calendar block-multitrack-calendar theme {{ block.theme || (block.fullwidth ? 'width-full' : 'width-box') }}"
 >
   <div>
     <header class="block-calendar-header">
@@ -16,9 +16,12 @@
     <div class="event-list">
       <h3 class="type-subtitle">{{ day.title }}</h3>
 
+      <div class="event-tracks-scroller">
+      <button type="button" class="event-tracks-arrow is-left" data-scroll="-1" aria-label="Ver tracks anteriores"></button>
+      <button type="button" class="event-tracks-arrow is-right" data-scroll="1" aria-label="Ver más tracks"></button>
       <div
         class="event-tracks"
-        style="--tracks: [{{ day.tracks.map((t) => `${t.id}-start] minmax(10em, auto) [${t.id}-end`).join(
+        style="--tracks: [{{ day.tracks.map((t) => `${t.id}-start] minmax(var(--track-min, 10em), 1fr) [${t.id}-end`).join(
   " ",
 ) }}]"
       >
@@ -136,6 +139,31 @@
           </div>
         {{ /for }}
       </div>
+      </div>
     </div>
   {{ /for }}
 </section>
+
+<script type="module">
+  document.querySelectorAll(".event-tracks-scroller:not([data-ready])").forEach((scroller) => {
+    scroller.dataset.ready = "";
+    const tracks = scroller.querySelector(".event-tracks");
+
+    const update = () => {
+      const max = tracks.scrollWidth - tracks.clientWidth;
+      scroller.classList.toggle("can-scroll-left", tracks.scrollLeft > 1);
+      scroller.classList.toggle("can-scroll-right", tracks.scrollLeft < max - 1);
+    };
+
+    tracks.addEventListener("scroll", update, { passive: true });
+    new ResizeObserver(update).observe(tracks);
+    update();
+
+    scroller.querySelectorAll("[data-scroll]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const column = tracks.querySelector(".event-track-title")?.offsetWidth || 200;
+        tracks.scrollBy({ left: Number(button.dataset.scroll) * column, behavior: "smooth" });
+      });
+    });
+  });
+</script>
