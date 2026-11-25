@@ -1,5 +1,6 @@
 ---
 layout: layouts/page-text.vto
+type: text
 title: Legal terms
 subtitle: Duis tempus id ante eget pulvinar
 menu:

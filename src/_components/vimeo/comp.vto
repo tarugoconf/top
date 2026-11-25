@@ -2,7 +2,9 @@
   id="{{ block.id }}"
   class="block-vimeo theme is-light box-fill no-padding width-full"
 >
-  {{ comp.vimeo(block) }}
+  <top-vimeo id="vimeo_{{ block.code }}" data-id="{{ block.code }}">
+    <img src="{{ block.cover }}" alt="{{ block.alt }}">
+  </top-vimeo>
 
   {{ if block.caption }}
     <figcaption>

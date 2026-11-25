@@ -1,4 +1,5 @@
 layout: layouts/page-blocks.vto
+type: blocks
 menu:
   - text: Location
     url: "#location"

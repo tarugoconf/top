@@ -1,5 +1,6 @@
 ---
 layout: layouts/page-text.vto
+type: text
 title: Privacy
 subtitle: Duis tempus id ante eget pulvinar
 menu:

@@ -25,6 +25,7 @@ export default function (options?: Options) {
       .use(basePath())
       .use(metas())
       .data("counter", () => id++)
+      .data("basename", "/", "pages")
       .use(lightningCSS())
       .use(icons())
       .use(favicon({
