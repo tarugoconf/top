@@ -1,3 +1,12 @@
-<top-vimeo id="vimeo_{{ code }}" data-id="{{ code }}">
-  <img src="{{ cover }}" alt="{{ alt }}">
-</top-vimeo>
+<figure
+  id="{{ block.id }}"
+  class="block-vimeo theme is-light box-fill no-padding width-full"
+>
+  {{ comp.vimeo(block) }}
+
+  {{ if block.caption }}
+    <figcaption>
+      {{ block.caption |> md }}
+    </figcaption>
+  {{ /if }}
+</figure>

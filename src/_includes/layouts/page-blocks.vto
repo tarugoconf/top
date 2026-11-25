@@ -1,0 +1,11 @@
+---
+layout: ./base.vto
+---
+
+{{ include `templates/navbar-${menu_style ?? "float"}.vto` }}
+<div class="ly-blocks">
+  {{ for block of blocks }}
+    {{ comp[block.type]({ block, blocks }) }}
+  {{ /for }}
+</div>
+{{ include "templates/footer.vto" }}

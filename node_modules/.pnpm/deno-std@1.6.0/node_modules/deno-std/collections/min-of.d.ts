@@ -1,0 +1,79 @@
+/**
+ * Applies the given selector to all elements of the given collection and
+ * returns the min value of all elements. If an empty array is provided the
+ * function will return undefined.
+ *
+ * @typeParam T The type of the elements in the array.
+ *
+ * @param array The array to find the minimum element in.
+ * @param selector The function to get the value to compare from each element.
+ * The function receives the element and its index.
+ *
+ * @returns The smallest value of the given function or undefined if there are
+ * no elements.
+ *
+ * @example Basic usage
+ * ```ts
+ * import { minOf } from "min-of.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const inventory = [
+ *   { name: "mustard", count: 2 },
+ *   { name: "soy", count: 4 },
+ *   { name: "tomato", count: 32 },
+ * ];
+ *
+ * const minCount = minOf(inventory, (item) => item.count);
+ *
+ * assertEquals(minCount, 2);
+ * ```
+ *
+ * @example Using the index parameter
+ * ```ts
+ * import { minOf } from "min-of.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const array = [4, 3, 2, 1];
+ * const result = minOf(array, (_, index) => index);
+ *
+ * assertEquals(result, 0);
+ * ```
+ */
+export declare function minOf<T>(
+  array: Iterable<T>,
+  selector: (el: T, index: number) => number,
+): number | undefined;
+/**
+ * Applies the given selector to all elements of the given collection and
+ * returns the min value of all elements. If an empty array is provided the
+ * function will return undefined.
+ *
+ * @typeParam T The type of the elements in the array.
+ *
+ * @param array The array to find the minimum element in.
+ * @param selector The function to get the value to compare from each element.
+ * The function receives the element and its index.
+ *
+ * @returns The first element that is the smallest value of the given function
+ * or undefined if there are no elements.
+ *
+ * @example Basic usage
+ * ```ts
+ * import { minOf } from "min-of.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const inventory = [
+ *   { name: "mustard", count: 2n },
+ *   { name: "soy", count: 4n },
+ *   { name: "tomato", count: 32n },
+ * ];
+ *
+ * const minCount = minOf(inventory, (item) => item.count);
+ *
+ * assertEquals(minCount, 2n);
+ * ```
+ */
+export declare function minOf<T>(
+  array: Iterable<T>,
+  selector: (el: T, index: number) => bigint,
+): bigint | undefined;

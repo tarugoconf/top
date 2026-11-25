@@ -2,6 +2,13 @@
 
 TRGCON Open Source Page
 
+
+# Setup
+
+```bash
+npm create lume -- --theme=trg-top
+```
+
 ## Showcase
 
 - [Coruña WTF](https://corunawtf.github.io/page/)

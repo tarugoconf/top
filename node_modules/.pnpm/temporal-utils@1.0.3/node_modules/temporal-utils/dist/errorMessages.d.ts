@@ -1,0 +1,9 @@
+export declare const expectedPositive: (entityName: string, num: number) => string;
+export declare const expectedFinite: (entityName: string, num: number) => string;
+export declare const forbiddenBigIntToNumber: (entityName: string) => string;
+export declare const invalidObject = "Invalid object";
+export declare const numberOutOfRange: (entityName: string, val: number | string, min: number | string, max: number | string) => string;
+export declare const invalidEntity: (fieldName: string, val: any) => string;
+export declare const unsupportedWeekNumbers = "Calendar week operations forbidden";
+export declare const nonOneRoundingIncrement = "Non-1 roundingIncrement not allowed";
+export declare const invalidOverflowOption = "Invalid overflow option";

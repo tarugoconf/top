@@ -1,0 +1,45 @@
+{
+  "name": "temporal-spec",
+  "version": "1.0.1",
+  "title": "TypeScript types for Temporal",
+  "author": {
+    "name": "Adam Shaw",
+    "email": "arshaw@users.noreply.github.com",
+    "url": "http://arshaw.com/"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullcalendar/temporal-polyfill.git",
+    "directory": "spec"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "global.js",
+    "global.d.ts"
+  ],
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./global": {
+      "types": "./global.d.ts",
+      "default": "./global.js"
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.1",
+    "typescript": "~5.3.3"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "lint": "biome check .",
+    "lint:fix": "biome check --apply .",
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}

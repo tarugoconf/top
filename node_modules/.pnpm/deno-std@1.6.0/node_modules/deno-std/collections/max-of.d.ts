@@ -1,0 +1,79 @@
+/**
+ * Applies the given selector to all elements of the provided collection and
+ * returns the max value of all elements. If an empty array is provided the
+ * function will return undefined.
+ *
+ * @typeParam T The type of the elements in the array.
+ *
+ * @param array The array to find the maximum element in.
+ * @param selector The function to get the value to compare from each element.
+ * The function receives the element and its index.
+ *
+ * @returns The largest value of the given function or undefined if there are no
+ * elements.
+ *
+ * @example Basic usage
+ * ```ts
+ * import { maxOf } from "max-of.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const inventory = [
+ *   { name: "mustard", count: 2 },
+ *   { name: "soy", count: 4 },
+ *   { name: "tomato", count: 32 },
+ * ];
+ *
+ * const maxCount = maxOf(inventory, (item) => item.count);
+ *
+ * assertEquals(maxCount, 32);
+ * ```
+ *
+ * @example Using the index parameter
+ * ```ts
+ * import { maxOf } from "max-of.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const array = [4, 3, 2, 1];
+ * const result = maxOf(array, (_, index) => index);
+ *
+ * assertEquals(result, 3);
+ * ```
+ */
+export declare function maxOf<T>(
+  array: Iterable<T>,
+  selector: (el: T, index: number) => number,
+): number | undefined;
+/**
+ * Applies the given selector to all elements of the provided collection and
+ * returns the max value of all elements. If an empty array is provided the
+ * function will return undefined.
+ *
+ * @typeParam T The type of the elements in the array.
+ *
+ * @param array The array to find the maximum element in.
+ * @param selector The function to get the value to compare from each element.
+ * The function receives the element and its index.
+ *
+ * @returns The first element that is the largest value of the given function or
+ * undefined if there are no elements.
+ *
+ * @example Basic usage
+ * ```ts
+ * import { maxOf } from "max-of.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const inventory = [
+ *   { name: "mustard", count: 2n },
+ *   { name: "soy", count: 4n },
+ *   { name: "tomato", count: 32n },
+ * ];
+ *
+ * const maxCount = maxOf(inventory, (i) => i.count);
+ *
+ * assertEquals(maxCount, 32n);
+ * ```
+ */
+export declare function maxOf<T>(
+  array: Iterable<T>,
+  selector: (el: T, index: number) => bigint,
+): bigint | undefined;

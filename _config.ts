@@ -1,10 +1,10 @@
-import lume from "lume/mod.ts";
-import plugins from "./plugins.ts";
+import lume from "@lumeland/lume";
+import theme from "./mod.ts";
 
 const site = lume({
   src: "src",
 });
 
-site.use(plugins());
+site.use(theme());
 
 export default site;

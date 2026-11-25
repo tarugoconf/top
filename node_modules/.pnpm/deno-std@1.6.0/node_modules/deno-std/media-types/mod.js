@@ -1,0 +1,34 @@
+// Copyright 2018-2026 the Deno authors. MIT license.
+// This module is browser compatible.
+/**
+ * Utility functions for media types (MIME types).
+ *
+ * This API is inspired by the GoLang {@linkcode https://pkg.go.dev/mime | mime}
+ * package and {@link https://github.com/jshttp/mime-types | jshttp/mime-types},
+ * and is designed to integrate and improve the APIs from
+ * {@link https://deno.land/x/media_types | x/media_types}.
+ *
+ * The `vendor` folder contains copy of the
+ * {@link https://github.com/jshttp/mime-types | jshttp/mime-db} `db.json` file,
+ * along with its license.
+ *
+ * ```ts
+ * import { contentType, allExtensions, getCharset } from "mod.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * assertEquals(allExtensions("application/json"), ["json", "map"]);
+ *
+ * assertEquals(contentType(".json"), "application/json; charset=UTF-8");
+ *
+ * assertEquals(getCharset("text/plain"), "UTF-8");
+ * ```
+ *
+ * @module
+ */
+export * from "./content-type.js";
+export * from "./extension.js";
+export * from "./all-extensions.js";
+export * from "./format-media-type.js";
+export * from "./get-charset.js";
+export * from "./parse-media-type.js";
+export * from "./type-by-extension.js";

@@ -1,0 +1,23 @@
+/**
+ * Converts a {@linkcode ReadableStream} of {@linkcode Uint8Array}s to an
+ * {@linkcode ArrayBuffer}. Works the same as {@linkcode Response.arrayBuffer}.
+ *
+ * @param readableStream A `ReadableStream` of `Uint8Array`s to convert into an `ArrayBuffer`.
+ * @returns A promise that resolves with the `ArrayBuffer` containing all the data from the stream.
+ *
+ * @example Basic usage
+ * ```ts
+ * import { toArrayBuffer } from "to-array-buffer.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const stream = ReadableStream.from([
+ *   new Uint8Array([1, 2]),
+ *   new Uint8Array([3, 4, 5]),
+ * ]);
+ * const buf = await toArrayBuffer(stream);
+ * assertEquals(buf.byteLength, 5);
+ * ```
+ */
+export declare function toArrayBuffer(
+  readableStream: ReadableStream<Uint8Array>,
+): Promise<ArrayBuffer>;

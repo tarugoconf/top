@@ -1,0 +1,49 @@
+// Copyright 2018-2026 the Deno authors. MIT license.
+// This module is browser compatible.
+/**
+ * Applies the given selector to all elements in the given collection and
+ * calculates the sum of the results.
+ *
+ * @typeParam T The type of the array elements.
+ *
+ * @param array The array to calculate the sum of.
+ * @param selector The selector function to get the value to sum. The function
+ * receives the element and its index.
+ *
+ * @returns The sum of all elements in the collection.
+ *
+ * @example Basic usage
+ * ```ts
+ * import { sumOf } from "sum-of.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const people = [
+ *   { name: "Anna", age: 34 },
+ *   { name: "Kim", age: 42 },
+ *   { name: "John", age: 23 },
+ * ];
+ *
+ * const totalAge = sumOf(people, (person) => person.age);
+ *
+ * assertEquals(totalAge, 99);
+ * ```
+ *
+ * @example Using the index parameter
+ * ```ts
+ * import { sumOf } from "sum-of.ts";
+ * import { assertEquals } from "../assert/mod.ts";
+ *
+ * const array = [1, 2, 3];
+ * const result = sumOf(array, (_, index) => index);
+ *
+ * assertEquals(result, 3);
+ * ```
+ */
+export function sumOf(array, selector) {
+  let sum = 0;
+  let index = 0;
+  for (const i of array) {
+    sum += selector(i, index++);
+  }
+  return sum;
+}

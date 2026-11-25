@@ -1,0 +1,24 @@
+import { RoundingMathOptions, RoundingMode } from './utils.js';
+export declare function roundToYear<T extends Temporal.PlainYearMonth | Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T): T;
+export declare function roundToYear<T extends Temporal.PlainYearMonth | Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T, roundingMode: RoundingMode): T;
+export declare function roundToYear<T extends Temporal.PlainYearMonth | Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T, options: RoundingMathOptions): T;
+export declare function roundToMonth<T extends Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T): T;
+export declare function roundToMonth<T extends Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T, roundingMode: RoundingMode): T;
+export declare function roundToMonth<T extends Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T, options: RoundingMathOptions): T;
+export declare function roundToWeek<T extends Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T): T;
+export declare function roundToWeek<T extends Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T, roundingMode: RoundingMode): T;
+export declare function roundToWeek<T extends Temporal.PlainDate | Temporal.PlainDateTime | Temporal.ZonedDateTime>(date: T, options: RoundingMathOptions): T;
+type NativeRoundFunc<T> = {
+    (date: T): T;
+    (date: T, roundingMode: RoundingMode): T;
+    (date: T, options: RoundingMathOptions): T;
+};
+type DayRoundable = Temporal.PlainDateTime | Temporal.ZonedDateTime;
+type TimeRoundable = Temporal.Instant | Temporal.PlainTime | Temporal.PlainDateTime | Temporal.ZonedDateTime;
+export declare const roundToDay: NativeRoundFunc<DayRoundable>;
+export declare const roundToHour: NativeRoundFunc<TimeRoundable>;
+export declare const roundToMinute: NativeRoundFunc<TimeRoundable>;
+export declare const roundToSecond: NativeRoundFunc<TimeRoundable>;
+export declare const roundToMillisecond: NativeRoundFunc<TimeRoundable>;
+export declare const roundToMicrosecond: NativeRoundFunc<TimeRoundable>;
+export {};

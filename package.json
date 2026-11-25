@@ -1,0 +1,51 @@
+{
+  "name": "theme-name",
+  "version": "1.0.0",
+  "description": "Lume theme for...",
+  "keywords": [
+    "lume-theme"
+  ],
+  "license": "MIT",
+  "author": "your-name",
+  "files": [
+    "build",
+    "CHANGELOG.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./mod.ts"
+  },
+  "scripts": {
+    "start": "lume build -s",
+    "build": "rm -rf package && tsc -p . && cp -r src build && pnpm pack --out=package.tgz && rm -rf build && tar -xzf package.tgz && rm package.tgz && node build.js && oxfmt package/*",
+    "fmt": "oxfmt ."
+  },
+  "dependencies": {
+    "@lumeland/cms": "^1.0.0",
+    "@lumeland/plugin-base-path": "^1.0.0",
+    "@lumeland/plugin-cms": "^1.0.0",
+    "@lumeland/plugin-date": "^1.0.0",
+    "@lumeland/plugin-favicon": "^1.0.0",
+    "@lumeland/plugin-icons": "^1.0.0",
+    "@lumeland/plugin-lightningcss": "^1.0.0",
+    "@lumeland/plugin-metas": "^1.0.0",
+    "@mdit/plugin-alert": "^2.2.0"
+  },
+  "devDependencies": {
+    "@lumeland/lume": "^4.0.0",
+    "@types/node": "^26.6.6",
+    "oxfmt": "^0.75.0",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "@lumeland/core": "^1.0.2"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.14.0"
+}

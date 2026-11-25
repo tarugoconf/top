@@ -1,0 +1,20 @@
+export declare const nanoInMicro = 1000;
+export declare const nanoInMilli = 1000000;
+export declare const nanoInSec = 1000000000;
+export declare const nanoInMinute = 60000000000;
+export declare const nanoInHour = 3600000000000;
+type RoundingUnit = Temporal.DateUnit | Temporal.TimeUnit;
+type RoundingOptionBag = Temporal.RoundingOptions<RoundingUnit>;
+export type RoundingMode = RoundingOptionBag['roundingMode'];
+export type RoundingMathOptions = Pick<RoundingOptionBag, 'roundingIncrement' | 'roundingMode'>;
+export declare function normalizeOptions<O extends {}>(options: O | undefined): O;
+export declare function toFiniteNumber(arg: number, entityName?: string): number;
+export declare function toIntegerWithTrunc(arg: number, entityName?: string): number;
+export declare function toPositiveIntegerWithTruncation(arg: number, entityName?: string): number;
+export declare function requireNumberIsPositive(num: number, entityName?: string): number;
+export declare function constrainToRange(num: number, min: number, max: number): number;
+export declare function isObjectLike(arg: unknown): arg is {};
+export declare function requireObjectLike<O extends {}>(arg: O): O;
+export declare function normalizeNumberInRange(num: number, min: number, max: number, // inclusive
+options?: Temporal.OverflowOptions): number;
+export {};
