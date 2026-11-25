@@ -1,0 +1,19 @@
+@layer reset, ui, theme;
+
+@import "styles/reset.css" layer(reset);
+@import "styles/base.css" layer(reset);
+@import "styles/variables.css" layer(reset);
+
+/* Generic UI components */
+@import "styles/ui/accordion.css" layer(ui);
+@import "styles/ui/button.css" layer(ui);
+@import "styles/ui/modal.css" layer(ui);
+@import "styles/ui/badge.css" layer(ui);
+@import "styles/ui/navbar-float.css" layer(ui);
+@import "styles/ui/navbar-flexible.css" layer(ui);
+@import "styles/ui/footer.css" layer(ui);
+@import "styles/ui/text.css" layer(ui);
+@import "styles/ui/markdown-alert.css" layer(ui);
+@import "styles/ui/typography.css" layer(ui);
+@import "styles/ui/theme.css" layer(ui);
+

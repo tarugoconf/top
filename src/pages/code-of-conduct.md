@@ -1,4 +1,5 @@
 ---
+layout: layouts/page-text.vto
 title: Code of conduct
 subtitle: Duis tempus id ante eget pulvinar
 menu:
